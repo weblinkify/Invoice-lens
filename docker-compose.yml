@@ -1,0 +1,67 @@
+name: invoicelens
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-invoicelens}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-invoicelens}
+      POSTGRES_DB: ${POSTGRES_DB:-invoicelens}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: ${REGISTRY:-ghcr.io/weblinkify}/invoicelens-backend:${TAG:-latest}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-invoicelens}:${POSTGRES_PASSWORD:-invoicelens}@postgres:5432/${POSTGRES_DB:-invoicelens}
+      LLM_PROVIDER: ${LLM_PROVIDER:-mock}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-opus-5-5}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      DEMO_MODE: ${DEMO_MODE:-true}
+      API_KEY: ${API_KEY:-}
+      CONFIDENCE_THRESHOLD: ${CONFIDENCE_THRESHOLD:-0.8}
+      CORS_ORIGINS: '["http://localhost:8080","http://localhost:5173"]'
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      WEBHOOK_BACKOFF_BASE_SECONDS: ${WEBHOOK_BACKOFF_BASE_SECONDS:-0.5}
+      MOCK_ERP_URL: http://mock-erp:9000/webhooks/invoices
+      MOCK_ERP_SECRET: ${MOCK_ERP_SECRET:-demo-webhook-secret}
+    volumes:
+      - storage:/data/storage
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+
+  frontend:
+    build:
+      context: frontend
+    image: ${REGISTRY:-ghcr.io/weblinkify}/invoicelens-frontend:${TAG:-latest}
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+
+  mock-erp:
+    build:
+      context: mock-erp
+    image: ${REGISTRY:-ghcr.io/weblinkify}/invoicelens-mock-erp:${TAG:-latest}
+    environment:
+      MOCK_ERP_SECRET: ${MOCK_ERP_SECRET:-demo-webhook-secret}
+    ports:
+      - "${MOCK_ERP_PORT:-9000}:9000"
+
+volumes:
+  pgdata:
+  storage:

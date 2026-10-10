@@ -7,26 +7,144 @@ on:
     branches: [main]
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
+
+permissions:
+  contents: read
 
 env:
   LLM_PROVIDER: mock
+  UV_VERSION: "0.12.18"
 
 jobs:
   backend:
-    runs-on: ubuntu-latest
+    name: Backend (lint, types, tests)
+    runs-on: ubuntu-24.04
     defaults:
       run:
         working-directory: backend
     steps:
-      - uses: actions/checkout@v4
-      - uses: astral-sh/setup-uv@v6
+      - uses: actions/checkout@v4.2.2
+      - uses: astral-sh/setup-uv@v6.7.0
         with:
-          enable-cache: true
+          version: ${{ env.UV_VERSION }}
           python-version: "3.12"
-      - run: uv sync --frozen
-      - run: uv run ruff check .
-      - run: uv run ruff format --check .
-      - run: uv run mypy .
-      - run: uv run pytest
+          enable-cache: true
+          cache-dependency-glob: backend/uv.lock
+      - name: Install
+        run: uv sync --frozen
+      - name: Ruff lint
+        run: uv run ruff check .
+      - name: Ruff format
+        run: uv run ruff format --check .
+      - name: Mypy (strict)
+        run: uv run mypy .
+      - name: Pytest + coverage (>= 85%)
+        run: uv run pytest --cov --cov-report=term-missing --cov-report=xml --junitxml=junit.xml
+      - name: Upload coverage
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: backend-coverage
+          path: |
+            backend/coverage.xml
+            backend/junit.xml
+      - name: mock-erp checks
+        working-directory: mock-erp
+        run: |
+          uv sync --frozen
+          uv run ruff check .
+          uv run ruff format --check .
+          uv run mypy .
+          uv run pytest
+
+  frontend:
+    name: Frontend (types in sync, lint, tests, build)
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: astral-sh/setup-uv@v6.7.0
+        with:
+          version: ${{ env.UV_VERSION }}
+          python-version: "3.12"
+          enable-cache: true
+          cache-dependency-glob: backend/uv.lock
+      - name: Install
+        run: npm ci
+      - name: Generated API types are in sync with the OpenAPI schema
+        run: |
+          (cd ../backend && uv sync --frozen --no-dev && uv run --no-dev python -m scripts.export_openapi ../frontend/openapi.json)
+          npm run gen:api
+          git diff --exit-code -- openapi.json src/api/schema.d.ts \
+            || (echo "::error::API types are stale. Run 'make openapi' and commit the result." && exit 1)
+      - name: ESLint
+        run: npm run lint
+      - name: Prettier
+        run: npm run format:check
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Vitest + coverage (>= 80%)
+        run: npm run test:coverage
+      - name: Upload coverage
+        if: always()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: frontend-coverage
+          path: frontend/coverage
+      - name: Build
+        run: npm run build
+
+  e2e:
+    name: E2E (docker compose + Playwright)
+    needs: [backend, frontend]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: docker/setup-buildx-action@v3.11.1
+      - name: Start stack
+        run: docker compose up -d --build --wait
+      - name: Install Playwright
+        working-directory: frontend
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Run E2E
+        working-directory: frontend
+        run: npm run e2e
+      - name: Stack logs
+        if: failure()
+        run: docker compose logs --no-color > compose-logs.txt
+      - name: Upload Playwright report, traces and logs
+        if: failure()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: playwright-report
+          path: |
+            frontend/playwright-report
+            frontend/test-results
+            compose-logs.txt
+          retention-days: 14
+      - name: Upload screenshots
+        if: success()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: screenshots
+          path: docs/screenshots
+      - name: Stop stack
+        if: always()
+        run: docker compose down -v

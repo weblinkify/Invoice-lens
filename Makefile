@@ -8,10 +8,10 @@ UV ?= uv
 COMPOSE ?= docker compose
 
 .PHONY: help setup dev dev-backend dev-frontend dev-mock test test-backend test-frontend \
-        lint format typecheck e2e e2e-local demo generate-invoices openapi up down logs clean
+        lint format e2e demo generate-invoices openapi accuracy up down logs clean
 
 help: ## Show this help
-	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}'
+	@grep -E '^[a-zA-Z0-9_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}'
 
 setup: ## Install all dependencies (backend, mock-erp, frontend, playwright)
 	cd $(BACKEND) && $(UV) sync
@@ -24,7 +24,7 @@ dev: ## Run backend + frontend locally with hot reload (SQLite, mock LLM)
 	@trap 'kill 0' EXIT; $(MAKE) dev-backend & $(MAKE) dev-frontend & wait
 
 dev-backend: ## Run the API on :8000
-	cd $(BACKEND) && $(UV) run alembic upgrade head && $(UV) run uvicorn app.main:app --reload --port 8000
+	cd $(BACKEND) && $(UV) run alembic upgrade head && $(UV) run uvicorn --factory app.main:create_app --reload --port 8000
 
 dev-frontend: ## Run the Vite dev server on :5173
 	cd $(FRONTEND) && npm run dev
@@ -64,12 +64,15 @@ down: ## Stop the stack
 logs: ## Tail stack logs
 	$(COMPOSE) logs -f
 
-e2e: up ## Run Playwright E2E tests against docker compose
-	cd $(FRONTEND) && npx playwright install --with-deps chromium && npm run e2e
+e2e: up ## Run Playwright E2E tests against docker compose (resets the stack's documents)
+	cd $(FRONTEND) && npx playwright install chromium && E2E_BASE_URL=http://localhost:$${FRONTEND_PORT:-8080} MOCK_ERP_URL=http://localhost:$${MOCK_ERP_PORT:-9000} npm run e2e
 
 demo: up ## Start the stack and seed it with the sample invoices
 	$(COMPOSE) exec -T backend python -m scripts.seed_demo --api http://localhost:8000
-	@echo "Open http://localhost:8080"
+	@echo "Open http://localhost:$${FRONTEND_PORT:-8080}"
+
+accuracy: ## Print the README accuracy table (runs inside the backend container)
+	$(COMPOSE) exec -T backend python -m scripts.accuracy_report
 
 generate-invoices: ## Regenerate mock invoice fixtures + sample data
 	cd $(BACKEND) && $(UV) run python -m scripts.generate_invoices --count 10 --out tests/fixtures/invoices --copy-to ../sample-data

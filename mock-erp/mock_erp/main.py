@@ -26,7 +26,9 @@ class Received(BaseModel):
     event: str | None
     delivery_id: str | None
     signature_valid: bool
+    signature: str
     attempt_number: int
+    raw_body: str
     payload: dict[str, Any]
 
 
@@ -73,7 +75,8 @@ def create_app(secret: str | None = None) -> FastAPI:
                 state.fail_next -= 1
                 state.forced_failures += 1
                 return Response('{"error":"simulated outage"}', 500, media_type="application/json")
-        valid = verify(shared_secret, request.headers.get(SIGNATURE_HEADER, ""), body)
+        signature = request.headers.get(SIGNATURE_HEADER, "")
+        valid = verify(shared_secret, signature, body)
         if not valid:
             with state.lock:
                 state.rejected += 1
@@ -86,7 +89,9 @@ def create_app(secret: str | None = None) -> FastAPI:
                     event=request.headers.get("X-InvoiceLens-Event"),
                     delivery_id=delivery_id,
                     signature_valid=True,
+                    signature=signature,
                     attempt_number=attempt,
+                    raw_body=body.decode(),
                     payload=data,
                 )
             )
