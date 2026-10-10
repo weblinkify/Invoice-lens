@@ -1,0 +1,32 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+        exclude: ^(backend/tests/fixtures|sample-data)/
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ["--maxkb=1500"]
+      - id: detect-private-key
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+        files: ^(backend|mock-erp)/
+      - id: ruff-format
+        files: ^(backend|mock-erp)/
+  - repo: local
+    hooks:
+      - id: prettier
+        name: prettier
+        entry: bash -c 'cd frontend && npx prettier --write "${@#frontend/}"' --
+        language: system
+        files: ^frontend/.*\.(ts|tsx|js|json|css|md)$
+        exclude: ^frontend/(openapi\.json|src/api/schema\.d\.ts|public/mockServiceWorker\.js)$
+      - id: eslint
+        name: eslint
+        entry: bash -c 'cd frontend && npx eslint --fix "${@#frontend/}"' --
+        language: system
+        files: ^frontend/.*\.(ts|tsx)$
