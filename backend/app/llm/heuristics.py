@@ -219,3 +219,17 @@ def _line_items(lines: list[str], loc: _Locator) -> list[LineItem]:
             )
         )
     return items
+
+
+def attach_bboxes(inv: InvoiceExtraction, ocr: OcrResult) -> InvoiceExtraction:
+    """Fill in missing bboxes for string values by locating them among OCR words."""
+    if not ocr.pages:
+        return inv
+    loc = _Locator(ocr)
+    for _, fld in inv.iter_fields():
+        if fld.bbox is None and isinstance(fld, StringField) and fld.value:
+            page, bbox = loc.find(fld.value)
+            if bbox is not None:
+                fld.bbox = bbox
+                fld.source_page = fld.source_page or page
+    return inv
