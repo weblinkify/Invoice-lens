@@ -44,7 +44,7 @@ REQUIRED_FIELDS = frozenset({"vendor_name", "invoice_number", "invoice_date", "c
 
 
 class _FieldBase(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", json_schema_serialization_defaults_required=True)
 
     confidence: Confidence = 0.0
     source_page: int | None = Field(default=None, ge=1)
@@ -67,7 +67,7 @@ AnyField = StringField | NumberField | DateField
 
 
 class LineItem(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", json_schema_serialization_defaults_required=True)
 
     description: StringField = Field(default_factory=StringField)
     quantity: NumberField = Field(default_factory=NumberField)
@@ -77,6 +77,8 @@ class LineItem(BaseModel):
 
 
 class ValidationIssue(BaseModel):
+    model_config = ConfigDict(json_schema_serialization_defaults_required=True)
+
     code: str
     message: str
     fields: list[str] = Field(default_factory=list)
@@ -85,7 +87,7 @@ class ValidationIssue(BaseModel):
 class InvoiceExtraction(BaseModel):
     """Strict extraction result. Field paths look like ``total`` or ``line_items.2.line_total``."""
 
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", json_schema_serialization_defaults_required=True)
 
     vendor_name: StringField = Field(default_factory=StringField)
     vendor_vat_id: StringField = Field(default_factory=StringField)

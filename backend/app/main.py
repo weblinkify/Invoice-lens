@@ -9,7 +9,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.routing import APIRoute
 
 from app.api.routes import documents, exports, meta, webhooks
-from app.api.schemas import HealthOut
+from app.api.schemas import PROBLEM_RESPONSES, HealthOut
 from app.core.config import Settings, get_settings
 from app.core.errors import install_error_handlers
 from app.core.logging import configure_logging
@@ -67,7 +67,11 @@ def create_app(settings: Settings | None = None, services: Services | None = Non
 
     app.add_api_route("/health", health, methods=["GET"], tags=["meta"], name="health")
 
-    api = APIRouter(prefix="/api/v1", dependencies=[Depends(require_api_key)])
+    api = APIRouter(
+        prefix="/api/v1",
+        dependencies=[Depends(require_api_key)],
+        responses=PROBLEM_RESPONSES,
+    )
     api.add_api_route("/health", health, methods=["GET"], tags=["meta"], name="api_health")
     api.include_router(documents.router)
     api.include_router(meta.router)

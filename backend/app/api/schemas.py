@@ -9,7 +9,9 @@ from app.domain.schema import InvoiceExtraction
 
 
 class DocumentOut(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(
+        from_attributes=True, json_schema_serialization_defaults_required=True
+    )
 
     id: str
     filename: str
@@ -87,7 +89,9 @@ class WebhookEndpointUpdate(BaseModel):
 
 
 class WebhookEndpointOut(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(
+        from_attributes=True, json_schema_serialization_defaults_required=True
+    )
 
     id: int
     url: str
@@ -98,7 +102,9 @@ class WebhookEndpointOut(BaseModel):
 
 
 class WebhookDeliveryOut(BaseModel):
-    model_config = ConfigDict(from_attributes=True)
+    model_config = ConfigDict(
+        from_attributes=True, json_schema_serialization_defaults_required=True
+    )
 
     id: int
     endpoint_id: int
@@ -123,3 +129,26 @@ class HealthOut(BaseModel):
     status: Literal["ok"]
     provider: str
     version: str
+
+
+class ProblemFieldError(BaseModel):
+    loc: list[str]
+    msg: str
+    type: str
+
+
+class Problem(BaseModel):
+    """RFC 7807 error envelope returned as ``application/problem+json``."""
+
+    type: str
+    title: str
+    status: int
+    detail: str
+    instance: str
+    errors: list[ProblemFieldError] | None = None
+
+
+PROBLEM_RESPONSES: dict[int | str, dict[str, object]] = {
+    status: {"model": Problem, "description": "Problem details (RFC 7807)"}
+    for status in ("4XX", 422, "5XX")
+}

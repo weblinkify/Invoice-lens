@@ -2,9 +2,9 @@ from datetime import UTC, datetime
 from typing import Any
 
 from sqlalchemy import JSON, DateTime, Dialect, MetaData
-from sqlalchemy.types import TypeDecorator
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.types import TypeDecorator
 
 NAMING = {
     "ix": "ix_%(column_0_label)s",
