@@ -1,0 +1,735 @@
+{
+  "invoice_02": {
+    "document": {
+      "id": "60a68724-41b9-409a-b7cf-395a69b75348",
+      "filename": "invoice_02_modern_se.pdf",
+      "content_type": "application/pdf",
+      "size_bytes": 2588,
+      "status": "needs_review",
+      "error": null,
+      "ocr_method": "pdf_text",
+      "page_count": 1,
+      "created_at": "2026-10-10T11:02:40.537623Z",
+      "updated_at": "2026-10-10T11:02:40.615434Z",
+      "approved_at": null,
+      "vendor_name": "Hansson Tech AB",
+      "invoice_number": "SE-2026-69161",
+      "total": 10890.08,
+      "currency": "SEK",
+      "needs_review": true,
+      "min_confidence": 0.58
+    },
+    "extraction": {
+      "document_id": "60a68724-41b9-409a-b7cf-395a69b75348",
+      "provider": "mock",
+      "threshold": 0.8,
+      "data": {
+        "vendor_name": {
+          "confidence": 0.77,
+          "source_page": 1,
+          "bbox": [0.0672, 0.0321, 0.3547, 0.0594],
+          "value": "Hansson Tech AB"
+        },
+        "vendor_vat_id": {
+          "confidence": 0.88,
+          "source_page": 1,
+          "bbox": [0.1941, 0.1377, 0.3151, 0.15],
+          "value": "SE557536455801"
+        },
+        "invoice_number": {
+          "confidence": 0.91,
+          "source_page": 1,
+          "bbox": [0.252, 0.1675, 0.3696, 0.1811],
+          "value": "SE-2026-69161"
+        },
+        "invoice_date": {
+          "confidence": 0.96,
+          "source_page": 1,
+          "bbox": [0.252, 0.1841, 0.336, 0.1978],
+          "value": "2026-04-14"
+        },
+        "due_date": {
+          "confidence": 0.9,
+          "source_page": 1,
+          "bbox": [0.252, 0.2007, 0.336, 0.2144],
+          "value": "2026-04-28"
+        },
+        "currency": {
+          "confidence": 0.93,
+          "source_page": 1,
+          "bbox": [0.252, 0.2174, 0.2856, 0.231],
+          "value": "SEK"
+        },
+        "line_items": [
+          {
+            "description": {
+              "confidence": 0.92,
+              "source_page": 1,
+              "bbox": [0.0672, 0.2802, 0.2772, 0.2925],
+              "value": "Training workshop (per person)"
+            },
+            "quantity": {
+              "confidence": 0.95,
+              "source_page": 1,
+              "bbox": [0.546, 0.2802, 0.5544, 0.2925],
+              "value": 4.0
+            },
+            "unit_price": {
+              "confidence": 0.98,
+              "source_page": 1,
+              "bbox": [0.6593, 0.2802, 0.7056, 0.2925],
+              "value": 255.46
+            },
+            "vat_rate": {
+              "confidence": 0.94,
+              "source_page": 1,
+              "bbox": [0.7509, 0.2802, 0.7812, 0.2925],
+              "value": 25.0
+            },
+            "line_total": {
+              "confidence": 0.91,
+              "source_page": 1,
+              "bbox": [0.8735, 0.2802, 0.9323, 0.2925],
+              "value": 1021.84
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.93,
+              "source_page": 1,
+              "bbox": [0.0672, 0.2992, 0.1588, 0.3115],
+              "value": "Security audit"
+            },
+            "quantity": {
+              "confidence": 0.99,
+              "source_page": 1,
+              "bbox": [0.546, 0.2992, 0.5544, 0.3115],
+              "value": 2.0
+            },
+            "unit_price": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.6467, 0.2992, 0.7056, 0.3115],
+              "value": 3424.65
+            },
+            "vat_rate": {
+              "confidence": 0.94,
+              "source_page": 1,
+              "bbox": [0.7509, 0.2992, 0.7812, 0.3115],
+              "value": 25.0
+            },
+            "line_total": {
+              "confidence": 0.92,
+              "source_page": 1,
+              "bbox": [0.8735, 0.2992, 0.9323, 0.3115],
+              "value": 6849.3
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.88,
+              "source_page": 1,
+              "bbox": [0.0672, 0.3182, 0.2185, 0.3305],
+              "value": "Laptop docking station"
+            },
+            "quantity": {
+              "confidence": 0.95,
+              "source_page": 1,
+              "bbox": [0.546, 0.3182, 0.5544, 0.3305],
+              "value": 4.0
+            },
+            "unit_price": {
+              "confidence": 0.96,
+              "source_page": 1,
+              "bbox": [0.6593, 0.3182, 0.7056, 0.3305],
+              "value": 210.23
+            },
+            "vat_rate": {
+              "confidence": 0.92,
+              "source_page": 1,
+              "bbox": [0.7509, 0.3182, 0.7812, 0.3305],
+              "value": 25.0
+            },
+            "line_total": {
+              "confidence": 0.96,
+              "source_page": 1,
+              "bbox": [0.8861, 0.3182, 0.9323, 0.3305],
+              "value": 840.92
+            }
+          }
+        ],
+        "subtotal": {
+          "confidence": 0.95,
+          "source_page": 1,
+          "bbox": [0.8287, 0.348, 0.8941, 0.3617],
+          "value": 8712.06
+        },
+        "vat_total": {
+          "confidence": 0.94,
+          "source_page": 1,
+          "bbox": [0.8287, 0.367, 0.8941, 0.3807],
+          "value": 2178.02
+        },
+        "total": {
+          "confidence": 0.96,
+          "source_page": 1,
+          "bbox": [0.807, 0.385, 0.8892, 0.4],
+          "value": 10890.08
+        },
+        "iban": {
+          "confidence": 0.9,
+          "source_page": 1,
+          "bbox": [0.2856, 0.4288, 0.5135, 0.4425],
+          "value": "SE6981518844729405576169"
+        },
+        "payment_reference": {
+          "confidence": 0.58,
+          "source_page": 1,
+          "bbox": [0.2856, 0.4454, 0.4574, 0.4591],
+          "value": "RF633601G105500875"
+        },
+        "validation_issues": [],
+        "needs_review": true
+      },
+      "corrected_fields": [],
+      "updated_at": "2026-10-10T11:02:40.616286Z"
+    }
+  },
+  "invoice_05": {
+    "document": {
+      "id": "902a0280-6475-475f-8c67-42a99328917c",
+      "filename": "invoice_05_modern_de_totals_mismatch.pdf",
+      "content_type": "application/pdf",
+      "size_bytes": 2727,
+      "status": "needs_review",
+      "error": null,
+      "ocr_method": "pdf_text",
+      "page_count": 1,
+      "created_at": "2026-10-10T11:02:40.644021Z",
+      "updated_at": "2026-10-10T11:02:40.697579Z",
+      "approved_at": null,
+      "vendor_name": "Budig Tech GmbH",
+      "invoice_number": "DE-2026-54477",
+      "total": 21191.51,
+      "currency": "EUR",
+      "needs_review": true,
+      "min_confidence": 0.215
+    },
+    "extraction": {
+      "document_id": "902a0280-6475-475f-8c67-42a99328917c",
+      "provider": "mock",
+      "threshold": 0.8,
+      "data": {
+        "vendor_name": {
+          "confidence": 0.97,
+          "source_page": 1,
+          "bbox": [0.0672, 0.0321, 0.3603, 0.0594],
+          "value": "Budig Tech GmbH"
+        },
+        "vendor_vat_id": {
+          "confidence": 0.91,
+          "source_page": 1,
+          "bbox": [0.1941, 0.1377, 0.2907, 0.15],
+          "value": "DE853477870"
+        },
+        "invoice_number": {
+          "confidence": 0.99,
+          "source_page": 1,
+          "bbox": [0.252, 0.1675, 0.3706, 0.1811],
+          "value": "DE-2026-54477"
+        },
+        "invoice_date": {
+          "confidence": 0.9,
+          "source_page": 1,
+          "bbox": [0.252, 0.1841, 0.336, 0.1978],
+          "value": "2026-06-19"
+        },
+        "due_date": {
+          "confidence": 0.97,
+          "source_page": 1,
+          "bbox": [0.252, 0.2007, 0.336, 0.2144],
+          "value": "2026-07-10"
+        },
+        "currency": {
+          "confidence": 0.89,
+          "source_page": 1,
+          "bbox": [0.252, 0.2174, 0.2874, 0.231],
+          "value": "EUR"
+        },
+        "line_items": [
+          {
+            "description": {
+              "confidence": 0.92,
+              "source_page": 1,
+              "bbox": [0.0672, 0.2802, 0.2134, 0.2925],
+              "value": "Printer toner cartridge"
+            },
+            "quantity": {
+              "confidence": 0.91,
+              "source_page": 1,
+              "bbox": [0.5376, 0.2802, 0.5544, 0.2925],
+              "value": 10.0
+            },
+            "unit_price": {
+              "confidence": 0.97,
+              "source_page": 1,
+              "bbox": [0.6677, 0.2802, 0.7056, 0.2925],
+              "value": 65.67
+            },
+            "vat_rate": {
+              "confidence": 0.91,
+              "source_page": 1,
+              "bbox": [0.7509, 0.2802, 0.7812, 0.2925],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.8861, 0.2802, 0.9323, 0.2925],
+              "value": 656.7
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.98,
+              "source_page": 1,
+              "bbox": [0.0672, 0.2992, 0.1756, 0.3115],
+              "value": "Support retainer"
+            },
+            "quantity": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.5376, 0.2992, 0.5544, 0.3115],
+              "value": 12.0
+            },
+            "unit_price": {
+              "confidence": 0.92,
+              "source_page": 1,
+              "bbox": [0.6467, 0.2992, 0.7056, 0.3115],
+              "value": 1255.92
+            },
+            "vat_rate": {
+              "confidence": 0.97,
+              "source_page": 1,
+              "bbox": [0.7509, 0.2992, 0.7812, 0.3115],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.95,
+              "source_page": 1,
+              "bbox": [0.8651, 0.2992, 0.9323, 0.3115],
+              "value": 15071.04
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.0672, 0.3182, 0.2503, 0.3305],
+              "value": "Consulting services (hours)"
+            },
+            "quantity": {
+              "confidence": 0.88,
+              "source_page": 1,
+              "bbox": [0.546, 0.3182, 0.5544, 0.3305],
+              "value": 4.0
+            },
+            "unit_price": {
+              "confidence": 0.95,
+              "source_page": 1,
+              "bbox": [0.6593, 0.3182, 0.7056, 0.3305],
+              "value": 150.29
+            },
+            "vat_rate": {
+              "confidence": 0.9,
+              "source_page": 1,
+              "bbox": [0.7509, 0.3182, 0.7812, 0.3305],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.94,
+              "source_page": 1,
+              "bbox": [0.8861, 0.3182, 0.9323, 0.3305],
+              "value": 601.16
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.9,
+              "source_page": 1,
+              "bbox": [0.0672, 0.3372, 0.2126, 0.3495],
+              "value": "Website maintenance"
+            },
+            "quantity": {
+              "confidence": 0.91,
+              "source_page": 1,
+              "bbox": [0.546, 0.3372, 0.5544, 0.3495],
+              "value": 3.0
+            },
+            "unit_price": {
+              "confidence": 0.91,
+              "source_page": 1,
+              "bbox": [0.6593, 0.3372, 0.7056, 0.3495],
+              "value": 400.37
+            },
+            "vat_rate": {
+              "confidence": 0.93,
+              "source_page": 1,
+              "bbox": [0.7509, 0.3372, 0.7812, 0.3495],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.99,
+              "source_page": 1,
+              "bbox": [0.8735, 0.3372, 0.9323, 0.3495],
+              "value": 1201.11
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.92,
+              "source_page": 1,
+              "bbox": [0.0672, 0.3562, 0.2185, 0.3685],
+              "value": "Laptop docking station"
+            },
+            "quantity": {
+              "confidence": 0.9,
+              "source_page": 1,
+              "bbox": [0.546, 0.3562, 0.5544, 0.3685],
+              "value": 1.0
+            },
+            "unit_price": {
+              "confidence": 0.95,
+              "source_page": 1,
+              "bbox": [0.6593, 0.3562, 0.7056, 0.3685],
+              "value": 269.58
+            },
+            "vat_rate": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.7509, 0.3562, 0.7812, 0.3685],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.92,
+              "source_page": 1,
+              "bbox": [0.8861, 0.3562, 0.9323, 0.3685],
+              "value": 269.58
+            }
+          }
+        ],
+        "subtotal": {
+          "confidence": 0.38,
+          "source_page": 1,
+          "bbox": [0.8175, 0.386, 0.8922, 0.3997],
+          "value": 17799.59
+        },
+        "vat_total": {
+          "confidence": 0.45,
+          "source_page": 1,
+          "bbox": [0.8268, 0.405, 0.8922, 0.4187],
+          "value": 3381.92
+        },
+        "total": {
+          "confidence": 0.465,
+          "source_page": 1,
+          "bbox": [0.806, 0.423, 0.8882, 0.438],
+          "value": 21191.51
+        },
+        "iban": {
+          "confidence": 0.215,
+          "source_page": 1,
+          "bbox": [0.2856, 0.4668, 0.4957, 0.4805],
+          "value": "DE4880457178472G714751"
+        },
+        "payment_reference": {
+          "confidence": 0.93,
+          "source_page": 1,
+          "bbox": [0.2856, 0.4834, 0.4387, 0.4971],
+          "value": "RF38205258983194"
+        },
+        "validation_issues": [
+          {
+            "code": "totals_mismatch",
+            "message": "Subtotal 17799.59 + VAT 3381.92 = 21181.51, but total is 21191.51",
+            "fields": ["subtotal", "vat_total", "total"]
+          },
+          {
+            "code": "invalid_iban",
+            "message": "IBAN checksum is invalid",
+            "fields": ["iban"]
+          }
+        ],
+        "needs_review": true
+      },
+      "corrected_fields": [],
+      "updated_at": "2026-10-10T11:02:40.697938Z"
+    }
+  },
+  "invoice_10": {
+    "document": {
+      "id": "161d3d83-3bbe-48f3-b943-317b951dea04",
+      "filename": "invoice_10_classic_de.pdf",
+      "content_type": "application/pdf",
+      "size_bytes": 2690,
+      "status": "needs_review",
+      "error": null,
+      "ocr_method": "pdf_text",
+      "page_count": 1,
+      "created_at": "2026-10-10T11:02:40.724683Z",
+      "updated_at": "2026-10-10T11:02:40.775299Z",
+      "approved_at": null,
+      "vendor_name": "Budig Tech GmbH",
+      "invoice_number": "DE-2026-74787",
+      "total": 7991.64,
+      "currency": "EUR",
+      "needs_review": true,
+      "min_confidence": 0.18
+    },
+    "extraction": {
+      "document_id": "161d3d83-3bbe-48f3-b943-317b951dea04",
+      "provider": "mock",
+      "threshold": 0.8,
+      "data": {
+        "vendor_name": {
+          "confidence": 0.98,
+          "source_page": 1,
+          "bbox": [0.0672, 0.052, 0.331, 0.0766],
+          "value": "Budig Tech GmbH"
+        },
+        "vendor_vat_id": {
+          "confidence": 0.92,
+          "source_page": 1,
+          "bbox": [0.1243, 0.1317, 0.221, 0.144],
+          "value": "DE853477870"
+        },
+        "invoice_number": {
+          "confidence": 0.94,
+          "source_page": 1,
+          "bbox": [0.252, 0.1615, 0.3706, 0.1752],
+          "value": "DE-2026-74787"
+        },
+        "invoice_date": {
+          "confidence": 0.96,
+          "source_page": 1,
+          "bbox": [0.252, 0.1782, 0.3379, 0.1918],
+          "value": "2026-01-30"
+        },
+        "due_date": {
+          "confidence": 0.9,
+          "source_page": 1,
+          "bbox": [0.252, 0.1948, 0.3379, 0.2085],
+          "value": "2026-03-01"
+        },
+        "currency": {
+          "confidence": 0.94,
+          "source_page": 1,
+          "bbox": [0.252, 0.2114, 0.2874, 0.2251],
+          "value": "EUR"
+        },
+        "line_items": [
+          {
+            "description": {
+              "confidence": 0.92,
+              "source_page": 1,
+              "bbox": [0.0672, 0.2743, 0.2302, 0.2866],
+              "value": "Office chairs, ergonomic"
+            },
+            "quantity": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.546, 0.2743, 0.5544, 0.2866],
+              "value": 2.0
+            },
+            "unit_price": {
+              "confidence": 0.88,
+              "source_page": 1,
+              "bbox": [0.6593, 0.2743, 0.7056, 0.2866],
+              "value": 225.9
+            },
+            "vat_rate": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.7509, 0.2743, 0.7812, 0.2866],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.98,
+              "source_page": 1,
+              "bbox": [0.8861, 0.2743, 0.9323, 0.2866],
+              "value": 451.8
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.88,
+              "source_page": 1,
+              "bbox": [0.0672, 0.2933, 0.2302, 0.3056],
+              "value": "Office chairs, ergonomic"
+            },
+            "quantity": {
+              "confidence": 0.96,
+              "source_page": 1,
+              "bbox": [0.5376, 0.2933, 0.5544, 0.3056],
+              "value": 12.0
+            },
+            "unit_price": {
+              "confidence": 0.9,
+              "source_page": 1,
+              "bbox": [0.6593, 0.2933, 0.7056, 0.3056],
+              "value": 323.48
+            },
+            "vat_rate": {
+              "confidence": 0.95,
+              "source_page": 1,
+              "bbox": [0.7509, 0.2933, 0.7812, 0.3056],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.8735, 0.2933, 0.9323, 0.3056],
+              "value": 3881.76
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.91,
+              "source_page": 1,
+              "bbox": [0.0672, 0.3123, 0.2168, 0.3246],
+              "value": "Shipping and handling"
+            },
+            "quantity": {
+              "confidence": 0.98,
+              "source_page": 1,
+              "bbox": [0.546, 0.3123, 0.5544, 0.3246],
+              "value": 4.0
+            },
+            "unit_price": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.6677, 0.3123, 0.7056, 0.3246],
+              "value": 40.44
+            },
+            "vat_rate": {
+              "confidence": 0.98,
+              "source_page": 1,
+              "bbox": [0.7509, 0.3123, 0.7812, 0.3246],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.95,
+              "source_page": 1,
+              "bbox": [0.8861, 0.3123, 0.9323, 0.3246],
+              "value": 161.76
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.96,
+              "source_page": 1,
+              "bbox": [0.0672, 0.3313, 0.2168, 0.3436],
+              "value": "Shipping and handling"
+            },
+            "quantity": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.546, 0.3313, 0.5544, 0.3436],
+              "value": 1.0
+            },
+            "unit_price": {
+              "confidence": 0.94,
+              "source_page": 1,
+              "bbox": [0.6677, 0.3313, 0.7056, 0.3436],
+              "value": 15.05
+            },
+            "vat_rate": {
+              "confidence": 0.98,
+              "source_page": 1,
+              "bbox": [0.7509, 0.3313, 0.7812, 0.3436],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.91,
+              "source_page": 1,
+              "bbox": [0.8945, 0.3313, 0.9323, 0.3436],
+              "value": 15.05
+            }
+          },
+          {
+            "description": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.0672, 0.3503, 0.2588, 0.3626],
+              "value": "Cloud hosting - monthly plan"
+            },
+            "quantity": {
+              "confidence": 0.91,
+              "source_page": 1,
+              "bbox": [0.5376, 0.3503, 0.5544, 0.3626],
+              "value": 10.0
+            },
+            "unit_price": {
+              "confidence": 0.99,
+              "source_page": 1,
+              "bbox": [0.6593, 0.3503, 0.7056, 0.3626],
+              "value": 220.53
+            },
+            "vat_rate": {
+              "confidence": 0.97,
+              "source_page": 1,
+              "bbox": [0.7509, 0.3503, 0.7812, 0.3626],
+              "value": 19.0
+            },
+            "line_total": {
+              "confidence": 0.89,
+              "source_page": 1,
+              "bbox": [0.8735, 0.3503, 0.9323, 0.3626],
+              "value": 2205.3
+            }
+          }
+        ],
+        "subtotal": {
+          "confidence": 0.93,
+          "source_page": 1,
+          "bbox": [0.8268, 0.3801, 0.8922, 0.3938],
+          "value": 6715.67
+        },
+        "vat_total": {
+          "confidence": 0.95,
+          "source_page": 1,
+          "bbox": [0.8268, 0.3991, 0.8922, 0.4128],
+          "value": 1275.97
+        },
+        "total": {
+          "confidence": 0.98,
+          "source_page": 1,
+          "bbox": [0.8163, 0.417, 0.8882, 0.4321],
+          "value": 7991.64
+        },
+        "iban": {
+          "confidence": 0.18,
+          "source_page": 1,
+          "bbox": [0.2856, 0.4609, 0.4957, 0.4745],
+          "value": "DE4B804571784726714751"
+        },
+        "payment_reference": {
+          "confidence": 0.72,
+          "source_page": 1,
+          "bbox": [0.2856, 0.4775, 0.4294, 0.4912],
+          "value": "RF1607941756250"
+        },
+        "validation_issues": [
+          {
+            "code": "invalid_iban",
+            "message": "IBAN checksum is invalid",
+            "fields": ["iban"]
+          }
+        ],
+        "needs_review": true
+      },
+      "corrected_fields": [],
+      "updated_at": "2026-10-10T11:02:40.775514Z"
+    }
+  }
+}
