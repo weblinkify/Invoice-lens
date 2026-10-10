@@ -72,6 +72,7 @@ warn_required_dynamic_aliases = true
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q --strict-markers"
+filterwarnings = ["ignore::DeprecationWarning:starlette.*", "ignore::DeprecationWarning:fastapi.testclient"]
 markers = ["integration: full API flow tests", "accuracy: extraction accuracy over fixtures"]
 
 [tool.coverage.run]
