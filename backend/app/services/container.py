@@ -1,8 +1,11 @@
 """Service container: every side-effecting dependency lives here so tests can swap it."""
 
+import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import datetime
+
+import httpx
 
 from app.core.config import Settings
 from app.db.base import utcnow
@@ -14,6 +17,7 @@ from app.ocr.base import OcrEngine
 from app.ocr.engines import build_ocr_engine
 from app.services.pipeline import ExtractionPipeline
 from app.services.storage import LocalStorage, Storage
+from app.services.webhooks import WebhookDispatcher
 
 
 @dataclass
@@ -25,11 +29,25 @@ class Services:
     provider: LLMProvider
     truth: TruthIndex
     clock: Callable[[], datetime] = field(default=utcnow)
+    http_client_factory: Callable[[], httpx.Client] | None = None
+    sleep: Callable[[float], None] = time.sleep
 
     @property
     def pipeline(self) -> ExtractionPipeline:
         return ExtractionPipeline(
             self.settings, self.session_factory, self.storage, self.ocr, self.provider
+        )
+
+    @property
+    def webhooks(self) -> WebhookDispatcher:
+        timeout = self.settings.webhook_timeout_seconds
+        return WebhookDispatcher(
+            session_factory=self.session_factory,
+            client_factory=self.http_client_factory or (lambda: httpx.Client(timeout=timeout)),
+            clock=self.clock,
+            sleep=self.sleep,
+            max_attempts=self.settings.webhook_max_attempts,
+            backoff_base=self.settings.webhook_backoff_base_seconds,
         )
 
 

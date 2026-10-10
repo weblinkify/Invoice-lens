@@ -192,5 +192,27 @@ def approve_document(
         )
     doc.status = DocumentStatus.APPROVED
     doc.approved_at = services.clock()
+    dispatcher = services.webhooks
+    delivery_ids = dispatcher.enqueue(
+        session, "invoice.approved", approval_payload(doc), document_id=doc.id
+    )
     session.commit()
+    if delivery_ids:
+        background.add_task(dispatcher.deliver_many, delivery_ids)
     return to_out(doc)
+
+
+def approval_payload(doc: Document) -> dict[str, object]:
+    assert doc.extraction is not None
+    inv = InvoiceExtraction.model_validate(doc.extraction.data)
+    return {
+        "document": {
+            "id": doc.id,
+            "filename": doc.filename,
+            "approved_at": doc.approved_at.isoformat() if doc.approved_at else None,
+            "vendor_id": doc.vendor_id,
+        },
+        "invoice": inv.plain_values(),
+        "validation_issues": [i.model_dump() for i in inv.validation_issues],
+        "corrected_fields": sorted((doc.extraction.overrides or {}).keys()),
+    }

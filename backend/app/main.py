@@ -8,7 +8,7 @@ from fastapi import APIRouter, Depends, FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.routing import APIRoute
 
-from app.api.routes import documents, meta
+from app.api.routes import documents, exports, meta, webhooks
 from app.api.schemas import HealthOut
 from app.core.config import Settings, get_settings
 from app.core.errors import install_error_handlers
@@ -71,5 +71,7 @@ def create_app(settings: Settings | None = None, services: Services | None = Non
     api.add_api_route("/health", health, methods=["GET"], tags=["meta"], name="api_health")
     api.include_router(documents.router)
     api.include_router(meta.router)
+    api.include_router(exports.router)
+    api.include_router(webhooks.router)
     app.include_router(api)
     return app
