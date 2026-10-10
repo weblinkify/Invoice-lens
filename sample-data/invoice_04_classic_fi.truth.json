@@ -1,0 +1,276 @@
+{
+  "file": "invoice_04_classic_fi.pdf",
+  "template": "classic",
+  "vendor_country": "FI",
+  "edge_cases": [],
+  "fields": {
+    "vendor_name": {
+      "value": "Heino Trading Oy",
+      "source_page": 1,
+      "bbox": [
+        0.0672,
+        0.052,
+        0.3192,
+        0.0766
+      ]
+    },
+    "vendor_vat_id": {
+      "value": "FI17784868",
+      "source_page": 1,
+      "bbox": [
+        0.1243,
+        0.1317,
+        0.205,
+        0.144
+      ]
+    },
+    "invoice_number": {
+      "value": "FI-2026-87667",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1615,
+        0.3622,
+        0.1752
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-02-09",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1782,
+        0.3379,
+        0.1918
+      ]
+    },
+    "due_date": {
+      "value": "2026-02-23",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1948,
+        0.3379,
+        0.2085
+      ]
+    },
+    "currency": {
+      "value": "USD",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2114,
+        0.2874,
+        0.2251
+      ]
+    },
+    "subtotal": {
+      "value": 18839.81,
+      "source_page": 1,
+      "bbox": [
+        0.8175,
+        0.3421,
+        0.8922,
+        0.3557
+      ]
+    },
+    "vat_total": {
+      "value": 4804.15,
+      "source_page": 1,
+      "bbox": [
+        0.8268,
+        0.3611,
+        0.8922,
+        0.3748
+      ]
+    },
+    "total": {
+      "value": 23643.96,
+      "source_page": 1,
+      "bbox": [
+        0.806,
+        0.379,
+        0.8882,
+        0.3941
+      ]
+    },
+    "iban": {
+      "value": "FI6988766344002978",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4229,
+        0.45,
+        0.4365
+      ]
+    },
+    "payment_reference": {
+      "value": "RF8026468616425247",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4395,
+        0.4574,
+        0.4531
+      ]
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2743,
+            0.1756,
+            0.2866
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.2743,
+            0.5544,
+            0.2866
+          ]
+        },
+        "unit_price": {
+          "value": 454.97,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.2743,
+            0.7056,
+            0.2866
+          ]
+        },
+        "vat_rate": {
+          "value": 25.5,
+          "source_page": 1,
+          "bbox": [
+            0.7383,
+            0.2743,
+            0.7812,
+            0.2866
+          ]
+        },
+        "line_total": {
+          "value": 454.97,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.2743,
+            0.9323,
+            0.2866
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Security audit",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2933,
+            0.1588,
+            0.3056
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.2933,
+            0.5544,
+            0.3056
+          ]
+        },
+        "unit_price": {
+          "value": 1490.55,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.2933,
+            0.7056,
+            0.3056
+          ]
+        },
+        "vat_rate": {
+          "value": 25.5,
+          "source_page": 1,
+          "bbox": [
+            0.7383,
+            0.2933,
+            0.7812,
+            0.3056
+          ]
+        },
+        "line_total": {
+          "value": 17886.6,
+          "source_page": 1,
+          "bbox": [
+            0.8651,
+            0.2933,
+            0.9323,
+            0.3056
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Shipping and handling",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3123,
+            0.2168,
+            0.3246
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.3123,
+            0.5544,
+            0.3246
+          ]
+        },
+        "unit_price": {
+          "value": 41.52,
+          "source_page": 1,
+          "bbox": [
+            0.6677,
+            0.3123,
+            0.7056,
+            0.3246
+          ]
+        },
+        "vat_rate": {
+          "value": 25.5,
+          "source_page": 1,
+          "bbox": [
+            0.7383,
+            0.3123,
+            0.7812,
+            0.3246
+          ]
+        },
+        "line_total": {
+          "value": 498.24,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3123,
+            0.9323,
+            0.3246
+          ]
+        }
+      }
+    ]
+  }
+}

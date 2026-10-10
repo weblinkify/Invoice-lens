@@ -1,0 +1,1890 @@
+{
+  "file": "invoice_08_modern_de_multi_page.pdf",
+  "template": "modern",
+  "vendor_country": "DE",
+  "edge_cases": [
+    "multi_page"
+  ],
+  "fields": {
+    "vendor_name": {
+      "value": "Kabus Trading GmbH",
+      "source_page": 1,
+      "bbox": [
+        0.0672,
+        0.0321,
+        0.4125,
+        0.0594
+      ]
+    },
+    "vendor_vat_id": {
+      "value": "DE816897683",
+      "source_page": 1,
+      "bbox": [
+        0.1941,
+        0.1377,
+        0.2907,
+        0.15
+      ]
+    },
+    "invoice_number": {
+      "value": "DE-2026-45081",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1675,
+        0.3706,
+        0.1811
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-08-04",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1841,
+        0.336,
+        0.1978
+      ]
+    },
+    "due_date": {
+      "value": "2026-08-18",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2007,
+        0.336,
+        0.2144
+      ]
+    },
+    "currency": {
+      "value": "EUR",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2174,
+        0.2874,
+        0.231
+      ]
+    },
+    "subtotal": {
+      "value": 167350.04,
+      "source_page": 2,
+      "bbox": [
+        0.8081,
+        0.3599,
+        0.8922,
+        0.3736
+      ]
+    },
+    "vat_total": {
+      "value": 31796.5,
+      "source_page": 2,
+      "bbox": [
+        0.8175,
+        0.3789,
+        0.8922,
+        0.3926
+      ]
+    },
+    "total": {
+      "value": 199146.54,
+      "source_page": 2,
+      "bbox": [
+        0.7957,
+        0.3968,
+        0.8882,
+        0.4119
+      ]
+    },
+    "iban": {
+      "value": "DE41697880932081967273",
+      "source_page": 2,
+      "bbox": [
+        0.2856,
+        0.4407,
+        0.4957,
+        0.4543
+      ]
+    },
+    "payment_reference": {
+      "value": "RF031975522204536",
+      "source_page": 2,
+      "bbox": [
+        0.2856,
+        0.4573,
+        0.4481,
+        0.471
+      ]
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Office chairs, ergonomic",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2802,
+            0.2302,
+            0.2925
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.2802,
+            0.5544,
+            0.2925
+          ]
+        },
+        "unit_price": {
+          "value": 285.7,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.2802,
+            0.7056,
+            0.2925
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.2802,
+            0.7812,
+            0.2925
+          ]
+        },
+        "line_total": {
+          "value": 285.7,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.2802,
+            0.9323,
+            0.2925
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Consulting services (hours)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2992,
+            0.2503,
+            0.3115
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.2992,
+            0.5544,
+            0.3115
+          ]
+        },
+        "unit_price": {
+          "value": 153.84,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.2992,
+            0.7056,
+            0.3115
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.2992,
+            0.7812,
+            0.3115
+          ]
+        },
+        "line_total": {
+          "value": 1846.08,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.2992,
+            0.9323,
+            0.3115
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Cloud hosting - monthly plan",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3182,
+            0.2588,
+            0.3305
+          ]
+        },
+        "quantity": {
+          "value": 2.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3182,
+            0.5544,
+            0.3305
+          ]
+        },
+        "unit_price": {
+          "value": 341.48,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3182,
+            0.7056,
+            0.3305
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3182,
+            0.7812,
+            0.3305
+          ]
+        },
+        "line_total": {
+          "value": 682.96,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3182,
+            0.9323,
+            0.3305
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3372,
+            0.1756,
+            0.3495
+          ]
+        },
+        "quantity": {
+          "value": 8.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3372,
+            0.5544,
+            0.3495
+          ]
+        },
+        "unit_price": {
+          "value": 1262.73,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.3372,
+            0.7056,
+            0.3495
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3372,
+            0.7812,
+            0.3495
+          ]
+        },
+        "line_total": {
+          "value": 10101.84,
+          "source_page": 1,
+          "bbox": [
+            0.8651,
+            0.3372,
+            0.9323,
+            0.3495
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Data migration project",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3562,
+            0.2151,
+            0.3685
+          ]
+        },
+        "quantity": {
+          "value": 8.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3562,
+            0.5544,
+            0.3685
+          ]
+        },
+        "unit_price": {
+          "value": 2701.18,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.3562,
+            0.7056,
+            0.3685
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3562,
+            0.7812,
+            0.3685
+          ]
+        },
+        "line_total": {
+          "value": 21609.44,
+          "source_page": 1,
+          "bbox": [
+            0.8651,
+            0.3562,
+            0.9323,
+            0.3685
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Printer toner cartridge",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3752,
+            0.2134,
+            0.3875
+          ]
+        },
+        "quantity": {
+          "value": 3.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3752,
+            0.5544,
+            0.3875
+          ]
+        },
+        "unit_price": {
+          "value": 85.95,
+          "source_page": 1,
+          "bbox": [
+            0.6677,
+            0.3752,
+            0.7056,
+            0.3875
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3752,
+            0.7812,
+            0.3875
+          ]
+        },
+        "line_total": {
+          "value": 257.85,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3752,
+            0.9323,
+            0.3875
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Software license (per seat)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3942,
+            0.247,
+            0.4065
+          ]
+        },
+        "quantity": {
+          "value": 4.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3942,
+            0.5544,
+            0.4065
+          ]
+        },
+        "unit_price": {
+          "value": 104.08,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3942,
+            0.7056,
+            0.4065
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3942,
+            0.7812,
+            0.4065
+          ]
+        },
+        "line_total": {
+          "value": 416.32,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3942,
+            0.9323,
+            0.4065
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.4132,
+            0.1756,
+            0.4255
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.4132,
+            0.5544,
+            0.4255
+          ]
+        },
+        "unit_price": {
+          "value": 879.0,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.4132,
+            0.7056,
+            0.4255
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.4132,
+            0.7812,
+            0.4255
+          ]
+        },
+        "line_total": {
+          "value": 879.0,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.4132,
+            0.9323,
+            0.4255
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Office chairs, ergonomic",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.4322,
+            0.2302,
+            0.4445
+          ]
+        },
+        "quantity": {
+          "value": 4.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.4322,
+            0.5544,
+            0.4445
+          ]
+        },
+        "unit_price": {
+          "value": 333.72,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.4322,
+            0.7056,
+            0.4445
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.4322,
+            0.7812,
+            0.4445
+          ]
+        },
+        "line_total": {
+          "value": 1334.88,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.4322,
+            0.9323,
+            0.4445
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Shipping and handling",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.4512,
+            0.2168,
+            0.4635
+          ]
+        },
+        "quantity": {
+          "value": 4.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.4512,
+            0.5544,
+            0.4635
+          ]
+        },
+        "unit_price": {
+          "value": 41.86,
+          "source_page": 1,
+          "bbox": [
+            0.6677,
+            0.4512,
+            0.7056,
+            0.4635
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.4512,
+            0.7812,
+            0.4635
+          ]
+        },
+        "line_total": {
+          "value": 167.44,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.4512,
+            0.9323,
+            0.4635
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Laptop docking station",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.4703,
+            0.2185,
+            0.4825
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.4703,
+            0.5544,
+            0.4825
+          ]
+        },
+        "unit_price": {
+          "value": 262.25,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.4703,
+            0.7056,
+            0.4825
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.4703,
+            0.7812,
+            0.4825
+          ]
+        },
+        "line_total": {
+          "value": 262.25,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.4703,
+            0.9323,
+            0.4825
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Office chairs, ergonomic",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.4893,
+            0.2302,
+            0.5016
+          ]
+        },
+        "quantity": {
+          "value": 3.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.4893,
+            0.5544,
+            0.5016
+          ]
+        },
+        "unit_price": {
+          "value": 288.18,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.4893,
+            0.7056,
+            0.5016
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.4893,
+            0.7812,
+            0.5016
+          ]
+        },
+        "line_total": {
+          "value": 864.54,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.4893,
+            0.9323,
+            0.5016
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Software license (per seat)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.5083,
+            0.247,
+            0.5206
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.5083,
+            0.5544,
+            0.5206
+          ]
+        },
+        "unit_price": {
+          "value": 31.72,
+          "source_page": 1,
+          "bbox": [
+            0.6677,
+            0.5083,
+            0.7056,
+            0.5206
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.5083,
+            0.7812,
+            0.5206
+          ]
+        },
+        "line_total": {
+          "value": 380.64,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.5083,
+            0.9323,
+            0.5206
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Website maintenance",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.5273,
+            0.2126,
+            0.5396
+          ]
+        },
+        "quantity": {
+          "value": 10.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.5273,
+            0.5544,
+            0.5396
+          ]
+        },
+        "unit_price": {
+          "value": 663.5,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.5273,
+            0.7056,
+            0.5396
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.5273,
+            0.7812,
+            0.5396
+          ]
+        },
+        "line_total": {
+          "value": 6635.0,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.5273,
+            0.9323,
+            0.5396
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Printer toner cartridge",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.5463,
+            0.2134,
+            0.5586
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.5463,
+            0.5544,
+            0.5586
+          ]
+        },
+        "unit_price": {
+          "value": 88.4,
+          "source_page": 1,
+          "bbox": [
+            0.6677,
+            0.5463,
+            0.7056,
+            0.5586
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.5463,
+            0.7812,
+            0.5586
+          ]
+        },
+        "line_total": {
+          "value": 88.4,
+          "source_page": 1,
+          "bbox": [
+            0.8945,
+            0.5463,
+            0.9323,
+            0.5586
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Data migration project",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.5653,
+            0.2151,
+            0.5776
+          ]
+        },
+        "quantity": {
+          "value": 8.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.5653,
+            0.5544,
+            0.5776
+          ]
+        },
+        "unit_price": {
+          "value": 1740.47,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.5653,
+            0.7056,
+            0.5776
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.5653,
+            0.7812,
+            0.5776
+          ]
+        },
+        "line_total": {
+          "value": 13923.76,
+          "source_page": 1,
+          "bbox": [
+            0.8651,
+            0.5653,
+            0.9323,
+            0.5776
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Consulting services (hours)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.5843,
+            0.2503,
+            0.5966
+          ]
+        },
+        "quantity": {
+          "value": 10.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.5843,
+            0.5544,
+            0.5966
+          ]
+        },
+        "unit_price": {
+          "value": 140.46,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.5843,
+            0.7056,
+            0.5966
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.5843,
+            0.7812,
+            0.5966
+          ]
+        },
+        "line_total": {
+          "value": 1404.6,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.5843,
+            0.9323,
+            0.5966
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Security audit",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.6033,
+            0.1588,
+            0.6156
+          ]
+        },
+        "quantity": {
+          "value": 2.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.6033,
+            0.5544,
+            0.6156
+          ]
+        },
+        "unit_price": {
+          "value": 2955.85,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.6033,
+            0.7056,
+            0.6156
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.6033,
+            0.7812,
+            0.6156
+          ]
+        },
+        "line_total": {
+          "value": 5911.7,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.6033,
+            0.9323,
+            0.6156
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Office chairs, ergonomic",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.6223,
+            0.2302,
+            0.6346
+          ]
+        },
+        "quantity": {
+          "value": 10.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.6223,
+            0.5544,
+            0.6346
+          ]
+        },
+        "unit_price": {
+          "value": 417.71,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.6223,
+            0.7056,
+            0.6346
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.6223,
+            0.7812,
+            0.6346
+          ]
+        },
+        "line_total": {
+          "value": 4177.1,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.6223,
+            0.9323,
+            0.6346
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.6413,
+            0.1756,
+            0.6536
+          ]
+        },
+        "quantity": {
+          "value": 5.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.6413,
+            0.5544,
+            0.6536
+          ]
+        },
+        "unit_price": {
+          "value": 1281.38,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.6413,
+            0.7056,
+            0.6536
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.6413,
+            0.7812,
+            0.6536
+          ]
+        },
+        "line_total": {
+          "value": 6406.9,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.6413,
+            0.9323,
+            0.6536
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Printer toner cartridge",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.083,
+            0.2134,
+            0.0953
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.083,
+            0.5544,
+            0.0953
+          ]
+        },
+        "unit_price": {
+          "value": 95.96,
+          "source_page": 2,
+          "bbox": [
+            0.6677,
+            0.083,
+            0.7056,
+            0.0953
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.083,
+            0.7812,
+            0.0953
+          ]
+        },
+        "line_total": {
+          "value": 95.96,
+          "source_page": 2,
+          "bbox": [
+            0.8945,
+            0.083,
+            0.9323,
+            0.0953
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Data migration project",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.102,
+            0.2151,
+            0.1143
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 2,
+          "bbox": [
+            0.5376,
+            0.102,
+            0.5544,
+            0.1143
+          ]
+        },
+        "unit_price": {
+          "value": 2441.05,
+          "source_page": 2,
+          "bbox": [
+            0.6467,
+            0.102,
+            0.7056,
+            0.1143
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.102,
+            0.7812,
+            0.1143
+          ]
+        },
+        "line_total": {
+          "value": 29292.6,
+          "source_page": 2,
+          "bbox": [
+            0.8651,
+            0.102,
+            0.9323,
+            0.1143
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.121,
+            0.1756,
+            0.1333
+          ]
+        },
+        "quantity": {
+          "value": 5.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.121,
+            0.5544,
+            0.1333
+          ]
+        },
+        "unit_price": {
+          "value": 357.89,
+          "source_page": 2,
+          "bbox": [
+            0.6593,
+            0.121,
+            0.7056,
+            0.1333
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.121,
+            0.7812,
+            0.1333
+          ]
+        },
+        "line_total": {
+          "value": 1789.45,
+          "source_page": 2,
+          "bbox": [
+            0.8735,
+            0.121,
+            0.9323,
+            0.1333
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Data migration project",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.14,
+            0.2151,
+            0.1523
+          ]
+        },
+        "quantity": {
+          "value": 8.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.14,
+            0.5544,
+            0.1523
+          ]
+        },
+        "unit_price": {
+          "value": 4722.69,
+          "source_page": 2,
+          "bbox": [
+            0.6467,
+            0.14,
+            0.7056,
+            0.1523
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.14,
+            0.7812,
+            0.1523
+          ]
+        },
+        "line_total": {
+          "value": 37781.52,
+          "source_page": 2,
+          "bbox": [
+            0.8651,
+            0.14,
+            0.9323,
+            0.1523
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Website maintenance",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.159,
+            0.2126,
+            0.1713
+          ]
+        },
+        "quantity": {
+          "value": 5.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.159,
+            0.5544,
+            0.1713
+          ]
+        },
+        "unit_price": {
+          "value": 754.3,
+          "source_page": 2,
+          "bbox": [
+            0.6593,
+            0.159,
+            0.7056,
+            0.1713
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.159,
+            0.7812,
+            0.1713
+          ]
+        },
+        "line_total": {
+          "value": 3771.5,
+          "source_page": 2,
+          "bbox": [
+            0.8735,
+            0.159,
+            0.9323,
+            0.1713
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Software license (per seat)",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.1781,
+            0.247,
+            0.1903
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.1781,
+            0.5544,
+            0.1903
+          ]
+        },
+        "unit_price": {
+          "value": 41.04,
+          "source_page": 2,
+          "bbox": [
+            0.6677,
+            0.1781,
+            0.7056,
+            0.1903
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.1781,
+            0.7812,
+            0.1903
+          ]
+        },
+        "line_total": {
+          "value": 41.04,
+          "source_page": 2,
+          "bbox": [
+            0.8945,
+            0.1781,
+            0.9323,
+            0.1903
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Shipping and handling",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.1971,
+            0.2168,
+            0.2094
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 2,
+          "bbox": [
+            0.5376,
+            0.1971,
+            0.5544,
+            0.2094
+          ]
+        },
+        "unit_price": {
+          "value": 43.27,
+          "source_page": 2,
+          "bbox": [
+            0.6677,
+            0.1971,
+            0.7056,
+            0.2094
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.1971,
+            0.7812,
+            0.2094
+          ]
+        },
+        "line_total": {
+          "value": 519.24,
+          "source_page": 2,
+          "bbox": [
+            0.8861,
+            0.1971,
+            0.9323,
+            0.2094
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Training workshop (per person)",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.2161,
+            0.2772,
+            0.2284
+          ]
+        },
+        "quantity": {
+          "value": 2.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.2161,
+            0.5544,
+            0.2284
+          ]
+        },
+        "unit_price": {
+          "value": 600.14,
+          "source_page": 2,
+          "bbox": [
+            0.6593,
+            0.2161,
+            0.7056,
+            0.2284
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.2161,
+            0.7812,
+            0.2284
+          ]
+        },
+        "line_total": {
+          "value": 1200.28,
+          "source_page": 2,
+          "bbox": [
+            0.8735,
+            0.2161,
+            0.9323,
+            0.2284
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Printer toner cartridge",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.2351,
+            0.2134,
+            0.2474
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 2,
+          "bbox": [
+            0.5376,
+            0.2351,
+            0.5544,
+            0.2474
+          ]
+        },
+        "unit_price": {
+          "value": 55.44,
+          "source_page": 2,
+          "bbox": [
+            0.6677,
+            0.2351,
+            0.7056,
+            0.2474
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.2351,
+            0.7812,
+            0.2474
+          ]
+        },
+        "line_total": {
+          "value": 665.28,
+          "source_page": 2,
+          "bbox": [
+            0.8861,
+            0.2351,
+            0.9323,
+            0.2474
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Consulting services (hours)",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.2541,
+            0.2503,
+            0.2664
+          ]
+        },
+        "quantity": {
+          "value": 5.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.2541,
+            0.5544,
+            0.2664
+          ]
+        },
+        "unit_price": {
+          "value": 109.35,
+          "source_page": 2,
+          "bbox": [
+            0.6593,
+            0.2541,
+            0.7056,
+            0.2664
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.2541,
+            0.7812,
+            0.2664
+          ]
+        },
+        "line_total": {
+          "value": 546.75,
+          "source_page": 2,
+          "bbox": [
+            0.8861,
+            0.2541,
+            0.9323,
+            0.2664
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Shipping and handling",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.2731,
+            0.2168,
+            0.2854
+          ]
+        },
+        "quantity": {
+          "value": 2.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.2731,
+            0.5544,
+            0.2854
+          ]
+        },
+        "unit_price": {
+          "value": 19.2,
+          "source_page": 2,
+          "bbox": [
+            0.6677,
+            0.2731,
+            0.7056,
+            0.2854
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.2731,
+            0.7812,
+            0.2854
+          ]
+        },
+        "line_total": {
+          "value": 38.4,
+          "source_page": 2,
+          "bbox": [
+            0.8945,
+            0.2731,
+            0.9323,
+            0.2854
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Office chairs, ergonomic",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.2921,
+            0.2302,
+            0.3044
+          ]
+        },
+        "quantity": {
+          "value": 5.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.2921,
+            0.5544,
+            0.3044
+          ]
+        },
+        "unit_price": {
+          "value": 229.17,
+          "source_page": 2,
+          "bbox": [
+            0.6593,
+            0.2921,
+            0.7056,
+            0.3044
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.2921,
+            0.7812,
+            0.3044
+          ]
+        },
+        "line_total": {
+          "value": 1145.85,
+          "source_page": 2,
+          "bbox": [
+            0.8735,
+            0.2921,
+            0.9323,
+            0.3044
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.3111,
+            0.1756,
+            0.3234
+          ]
+        },
+        "quantity": {
+          "value": 8.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.3111,
+            0.5544,
+            0.3234
+          ]
+        },
+        "unit_price": {
+          "value": 1463.02,
+          "source_page": 2,
+          "bbox": [
+            0.6467,
+            0.3111,
+            0.7056,
+            0.3234
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.3111,
+            0.7812,
+            0.3234
+          ]
+        },
+        "line_total": {
+          "value": 11704.16,
+          "source_page": 2,
+          "bbox": [
+            0.8651,
+            0.3111,
+            0.9323,
+            0.3234
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Office chairs, ergonomic",
+          "source_page": 2,
+          "bbox": [
+            0.0672,
+            0.3301,
+            0.2302,
+            0.3424
+          ]
+        },
+        "quantity": {
+          "value": 3.0,
+          "source_page": 2,
+          "bbox": [
+            0.546,
+            0.3301,
+            0.5544,
+            0.3424
+          ]
+        },
+        "unit_price": {
+          "value": 373.87,
+          "source_page": 2,
+          "bbox": [
+            0.6593,
+            0.3301,
+            0.7056,
+            0.3424
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 2,
+          "bbox": [
+            0.7509,
+            0.3301,
+            0.7812,
+            0.3424
+          ]
+        },
+        "line_total": {
+          "value": 1121.61,
+          "source_page": 2,
+          "bbox": [
+            0.8735,
+            0.3301,
+            0.9323,
+            0.3424
+          ]
+        }
+      }
+    ]
+  }
+}

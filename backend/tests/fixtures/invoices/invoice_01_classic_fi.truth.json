@@ -1,0 +1,380 @@
+{
+  "file": "invoice_01_classic_fi.pdf",
+  "template": "classic",
+  "vendor_country": "FI",
+  "edge_cases": [],
+  "fields": {
+    "vendor_name": {
+      "value": "Rossi Tech Oy",
+      "source_page": 1,
+      "bbox": [
+        0.0672,
+        0.052,
+        0.2773,
+        0.0766
+      ]
+    },
+    "vendor_vat_id": {
+      "value": "FI58813995",
+      "source_page": 1,
+      "bbox": [
+        0.1243,
+        0.1317,
+        0.205,
+        0.144
+      ]
+    },
+    "invoice_number": {
+      "value": "FI-2026-21284",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1615,
+        0.3622,
+        0.1752
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-06-16",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1782,
+        0.3379,
+        0.1918
+      ]
+    },
+    "due_date": {
+      "value": "2026-07-07",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1948,
+        0.3379,
+        0.2085
+      ]
+    },
+    "currency": {
+      "value": "EUR",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2114,
+        0.2874,
+        0.2251
+      ]
+    },
+    "subtotal": {
+      "value": 3816.57,
+      "source_page": 1,
+      "bbox": [
+        0.8268,
+        0.3801,
+        0.8922,
+        0.3938
+      ]
+    },
+    "vat_total": {
+      "value": 973.22,
+      "source_page": 1,
+      "bbox": [
+        0.8408,
+        0.3991,
+        0.8922,
+        0.4128
+      ]
+    },
+    "total": {
+      "value": 4789.79,
+      "source_page": 1,
+      "bbox": [
+        0.8163,
+        0.417,
+        0.8882,
+        0.4321
+      ]
+    },
+    "iban": {
+      "value": "FI8298797309114170",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4609,
+        0.45,
+        0.4745
+      ]
+    },
+    "payment_reference": {
+      "value": "RF9259972837",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4775,
+        0.4014,
+        0.4912
+      ]
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Consulting services (hours)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2743,
+            0.2503,
+            0.2866
+          ]
+        },
+        "quantity": {
+          "value": 10.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.2743,
+            0.5544,
+            0.2866
+          ]
+        },
+        "unit_price": {
+          "value": 131.45,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.2743,
+            0.7056,
+            0.2866
+          ]
+        },
+        "vat_rate": {
+          "value": 25.5,
+          "source_page": 1,
+          "bbox": [
+            0.7383,
+            0.2743,
+            0.7812,
+            0.2866
+          ]
+        },
+        "line_total": {
+          "value": 1314.5,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.2743,
+            0.9323,
+            0.2866
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2933,
+            0.1756,
+            0.3056
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.2933,
+            0.5544,
+            0.3056
+          ]
+        },
+        "unit_price": {
+          "value": 1032.16,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.2933,
+            0.7056,
+            0.3056
+          ]
+        },
+        "vat_rate": {
+          "value": 25.5,
+          "source_page": 1,
+          "bbox": [
+            0.7383,
+            0.2933,
+            0.7812,
+            0.3056
+          ]
+        },
+        "line_total": {
+          "value": 1032.16,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.2933,
+            0.9323,
+            0.3056
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Cloud hosting - monthly plan",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3123,
+            0.2588,
+            0.3246
+          ]
+        },
+        "quantity": {
+          "value": 3.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3123,
+            0.5544,
+            0.3246
+          ]
+        },
+        "unit_price": {
+          "value": 123.35,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3123,
+            0.7056,
+            0.3246
+          ]
+        },
+        "vat_rate": {
+          "value": 25.5,
+          "source_page": 1,
+          "bbox": [
+            0.7383,
+            0.3123,
+            0.7812,
+            0.3246
+          ]
+        },
+        "line_total": {
+          "value": 370.05,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3123,
+            0.9323,
+            0.3246
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Software license (per seat)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3313,
+            0.247,
+            0.3436
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3313,
+            0.5544,
+            0.3436
+          ]
+        },
+        "unit_price": {
+          "value": 101.7,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3313,
+            0.7056,
+            0.3436
+          ]
+        },
+        "vat_rate": {
+          "value": 25.5,
+          "source_page": 1,
+          "bbox": [
+            0.7383,
+            0.3313,
+            0.7812,
+            0.3436
+          ]
+        },
+        "line_total": {
+          "value": 101.7,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3313,
+            0.9323,
+            0.3436
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Cloud hosting - monthly plan",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3503,
+            0.2588,
+            0.3626
+          ]
+        },
+        "quantity": {
+          "value": 4.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3503,
+            0.5544,
+            0.3626
+          ]
+        },
+        "unit_price": {
+          "value": 249.54,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3503,
+            0.7056,
+            0.3626
+          ]
+        },
+        "vat_rate": {
+          "value": 25.5,
+          "source_page": 1,
+          "bbox": [
+            0.7383,
+            0.3503,
+            0.7812,
+            0.3626
+          ]
+        },
+        "line_total": {
+          "value": 998.16,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3503,
+            0.9323,
+            0.3626
+          ]
+        }
+      }
+    ]
+  }
+}

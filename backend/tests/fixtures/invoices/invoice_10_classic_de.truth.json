@@ -1,0 +1,380 @@
+{
+  "file": "invoice_10_classic_de.pdf",
+  "template": "classic",
+  "vendor_country": "DE",
+  "edge_cases": [],
+  "fields": {
+    "vendor_name": {
+      "value": "Budig Tech GmbH",
+      "source_page": 1,
+      "bbox": [
+        0.0672,
+        0.052,
+        0.331,
+        0.0766
+      ]
+    },
+    "vendor_vat_id": {
+      "value": "DE853477870",
+      "source_page": 1,
+      "bbox": [
+        0.1243,
+        0.1317,
+        0.221,
+        0.144
+      ]
+    },
+    "invoice_number": {
+      "value": "DE-2026-74787",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1615,
+        0.3706,
+        0.1752
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-01-30",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1782,
+        0.3379,
+        0.1918
+      ]
+    },
+    "due_date": {
+      "value": "2026-03-01",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1948,
+        0.3379,
+        0.2085
+      ]
+    },
+    "currency": {
+      "value": "EUR",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2114,
+        0.2874,
+        0.2251
+      ]
+    },
+    "subtotal": {
+      "value": 6715.67,
+      "source_page": 1,
+      "bbox": [
+        0.8268,
+        0.3801,
+        0.8922,
+        0.3938
+      ]
+    },
+    "vat_total": {
+      "value": 1275.97,
+      "source_page": 1,
+      "bbox": [
+        0.8268,
+        0.3991,
+        0.8922,
+        0.4128
+      ]
+    },
+    "total": {
+      "value": 7991.64,
+      "source_page": 1,
+      "bbox": [
+        0.8163,
+        0.417,
+        0.8882,
+        0.4321
+      ]
+    },
+    "iban": {
+      "value": "DE48804571784726714751",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4609,
+        0.4957,
+        0.4745
+      ]
+    },
+    "payment_reference": {
+      "value": "RF1607941756250",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4775,
+        0.4294,
+        0.4912
+      ]
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Office chairs, ergonomic",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2743,
+            0.2302,
+            0.2866
+          ]
+        },
+        "quantity": {
+          "value": 2.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.2743,
+            0.5544,
+            0.2866
+          ]
+        },
+        "unit_price": {
+          "value": 225.9,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.2743,
+            0.7056,
+            0.2866
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.2743,
+            0.7812,
+            0.2866
+          ]
+        },
+        "line_total": {
+          "value": 451.8,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.2743,
+            0.9323,
+            0.2866
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Office chairs, ergonomic",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2933,
+            0.2302,
+            0.3056
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.2933,
+            0.5544,
+            0.3056
+          ]
+        },
+        "unit_price": {
+          "value": 323.48,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.2933,
+            0.7056,
+            0.3056
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.2933,
+            0.7812,
+            0.3056
+          ]
+        },
+        "line_total": {
+          "value": 3881.76,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.2933,
+            0.9323,
+            0.3056
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Shipping and handling",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3123,
+            0.2168,
+            0.3246
+          ]
+        },
+        "quantity": {
+          "value": 4.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3123,
+            0.5544,
+            0.3246
+          ]
+        },
+        "unit_price": {
+          "value": 40.44,
+          "source_page": 1,
+          "bbox": [
+            0.6677,
+            0.3123,
+            0.7056,
+            0.3246
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3123,
+            0.7812,
+            0.3246
+          ]
+        },
+        "line_total": {
+          "value": 161.76,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3123,
+            0.9323,
+            0.3246
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Shipping and handling",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3313,
+            0.2168,
+            0.3436
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3313,
+            0.5544,
+            0.3436
+          ]
+        },
+        "unit_price": {
+          "value": 15.05,
+          "source_page": 1,
+          "bbox": [
+            0.6677,
+            0.3313,
+            0.7056,
+            0.3436
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3313,
+            0.7812,
+            0.3436
+          ]
+        },
+        "line_total": {
+          "value": 15.05,
+          "source_page": 1,
+          "bbox": [
+            0.8945,
+            0.3313,
+            0.9323,
+            0.3436
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Cloud hosting - monthly plan",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3503,
+            0.2588,
+            0.3626
+          ]
+        },
+        "quantity": {
+          "value": 10.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.3503,
+            0.5544,
+            0.3626
+          ]
+        },
+        "unit_price": {
+          "value": 220.53,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3503,
+            0.7056,
+            0.3626
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3503,
+            0.7812,
+            0.3626
+          ]
+        },
+        "line_total": {
+          "value": 2205.3,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.3503,
+            0.9323,
+            0.3626
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "file": "invoice_03_minimal_de.pdf",
+  "template": "minimal",
+  "vendor_country": "DE",
+  "edge_cases": [],
+  "fields": {
+    "vendor_name": {
+      "value": "Kabus Trading GmbH",
+      "source_page": 1,
+      "bbox": [
+        0.2984,
+        0.0542,
+        0.5887,
+        0.076
+      ]
+    },
+    "vendor_vat_id": {
+      "value": "DE816897683",
+      "source_page": 1,
+      "bbox": [
+        0.1488,
+        0.1495,
+        0.2486,
+        0.1618
+      ]
+    },
+    "invoice_number": {
+      "value": "DE-2026-94176",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1794,
+        0.383,
+        0.193
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-03-05",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.196,
+        0.3629,
+        0.2096
+      ]
+    },
+    "due_date": {
+      "value": "2026-04-04",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2126,
+        0.3629,
+        0.2263
+      ]
+    },
+    "currency": {
+      "value": "EUR",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2292,
+        0.2822,
+        0.2429
+      ]
+    },
+    "subtotal": {
+      "value": 15313.6,
+      "source_page": 1,
+      "bbox": [
+        0.8013,
+        0.3789,
+        0.892,
+        0.3926
+      ]
+    },
+    "vat_total": {
+      "value": 2909.59,
+      "source_page": 1,
+      "bbox": [
+        0.8114,
+        0.3979,
+        0.892,
+        0.4116
+      ]
+    },
+    "total": {
+      "value": 18223.19,
+      "source_page": 1,
+      "bbox": [
+        0.7882,
+        0.4159,
+        0.888,
+        0.4309
+      ]
+    },
+    "iban": {
+      "value": "DE41697880932081967273",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4597,
+        0.5073,
+        0.4733
+      ]
+    },
+    "payment_reference": {
+      "value": "RF2286032080",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4763,
+        0.4065,
+        0.49
+      ]
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2921,
+            0.2123,
+            0.3044
+          ]
+        },
+        "quantity": {
+          "value": 10.0,
+          "source_page": 1,
+          "bbox": [
+            0.5362,
+            0.2921,
+            0.5544,
+            0.3044
+          ]
+        },
+        "unit_price": {
+          "value": 985.94,
+          "source_page": 1,
+          "bbox": [
+            0.6511,
+            0.2921,
+            0.7056,
+            0.3044
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7539,
+            0.2921,
+            0.7812,
+            0.3044
+          ]
+        },
+        "line_total": {
+          "value": 9859.4,
+          "source_page": 1,
+          "bbox": [
+            0.8598,
+            0.2921,
+            0.9323,
+            0.3044
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Website maintenance",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3111,
+            0.2396,
+            0.3234
+          ]
+        },
+        "quantity": {
+          "value": 2.0,
+          "source_page": 1,
+          "bbox": [
+            0.5453,
+            0.3111,
+            0.5544,
+            0.3234
+          ]
+        },
+        "unit_price": {
+          "value": 350.03,
+          "source_page": 1,
+          "bbox": [
+            0.6511,
+            0.3111,
+            0.7056,
+            0.3234
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7539,
+            0.3111,
+            0.7812,
+            0.3234
+          ]
+        },
+        "line_total": {
+          "value": 700.06,
+          "source_page": 1,
+          "bbox": [
+            0.8779,
+            0.3111,
+            0.9323,
+            0.3234
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Software license (per seat)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3301,
+            0.3121,
+            0.3424
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 1,
+          "bbox": [
+            0.5362,
+            0.3301,
+            0.5544,
+            0.3424
+          ]
+        },
+        "unit_price": {
+          "value": 41.77,
+          "source_page": 1,
+          "bbox": [
+            0.6602,
+            0.3301,
+            0.7056,
+            0.3424
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7539,
+            0.3301,
+            0.7812,
+            0.3424
+          ]
+        },
+        "line_total": {
+          "value": 501.24,
+          "source_page": 1,
+          "bbox": [
+            0.8779,
+            0.3301,
+            0.9323,
+            0.3424
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3491,
+            0.2123,
+            0.3614
+          ]
+        },
+        "quantity": {
+          "value": 5.0,
+          "source_page": 1,
+          "bbox": [
+            0.5453,
+            0.3491,
+            0.5544,
+            0.3614
+          ]
+        },
+        "unit_price": {
+          "value": 850.58,
+          "source_page": 1,
+          "bbox": [
+            0.6511,
+            0.3491,
+            0.7056,
+            0.3614
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7539,
+            0.3491,
+            0.7812,
+            0.3614
+          ]
+        },
+        "line_total": {
+          "value": 4252.9,
+          "source_page": 1,
+          "bbox": [
+            0.8598,
+            0.3491,
+            0.9323,
+            0.3614
+          ]
+        }
+      }
+    ]
+  }
+}

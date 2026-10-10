@@ -1,0 +1,276 @@
+{
+  "file": "invoice_02_modern_se.pdf",
+  "template": "modern",
+  "vendor_country": "SE",
+  "edge_cases": [],
+  "fields": {
+    "vendor_name": {
+      "value": "Hansson Tech AB",
+      "source_page": 1,
+      "bbox": [
+        0.0672,
+        0.0321,
+        0.3547,
+        0.0594
+      ]
+    },
+    "vendor_vat_id": {
+      "value": "SE557536455801",
+      "source_page": 1,
+      "bbox": [
+        0.1941,
+        0.1377,
+        0.3151,
+        0.15
+      ]
+    },
+    "invoice_number": {
+      "value": "SE-2026-69161",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1675,
+        0.3696,
+        0.1811
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-04-14",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1841,
+        0.336,
+        0.1978
+      ]
+    },
+    "due_date": {
+      "value": "2026-04-28",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2007,
+        0.336,
+        0.2144
+      ]
+    },
+    "currency": {
+      "value": "SEK",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2174,
+        0.2856,
+        0.231
+      ]
+    },
+    "subtotal": {
+      "value": 8712.06,
+      "source_page": 1,
+      "bbox": [
+        0.8287,
+        0.348,
+        0.8941,
+        0.3617
+      ]
+    },
+    "vat_total": {
+      "value": 2178.02,
+      "source_page": 1,
+      "bbox": [
+        0.8287,
+        0.367,
+        0.8941,
+        0.3807
+      ]
+    },
+    "total": {
+      "value": 10890.08,
+      "source_page": 1,
+      "bbox": [
+        0.807,
+        0.385,
+        0.8892,
+        0.4
+      ]
+    },
+    "iban": {
+      "value": "SE6981518844729405576169",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4288,
+        0.5135,
+        0.4425
+      ]
+    },
+    "payment_reference": {
+      "value": "RF6336016105500875",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4454,
+        0.4574,
+        0.4591
+      ]
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Training workshop (per person)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2802,
+            0.2772,
+            0.2925
+          ]
+        },
+        "quantity": {
+          "value": 4.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.2802,
+            0.5544,
+            0.2925
+          ]
+        },
+        "unit_price": {
+          "value": 255.46,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.2802,
+            0.7056,
+            0.2925
+          ]
+        },
+        "vat_rate": {
+          "value": 25.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.2802,
+            0.7812,
+            0.2925
+          ]
+        },
+        "line_total": {
+          "value": 1021.84,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.2802,
+            0.9323,
+            0.2925
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Security audit",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2992,
+            0.1588,
+            0.3115
+          ]
+        },
+        "quantity": {
+          "value": 2.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.2992,
+            0.5544,
+            0.3115
+          ]
+        },
+        "unit_price": {
+          "value": 3424.65,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.2992,
+            0.7056,
+            0.3115
+          ]
+        },
+        "vat_rate": {
+          "value": 25.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.2992,
+            0.7812,
+            0.3115
+          ]
+        },
+        "line_total": {
+          "value": 6849.3,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.2992,
+            0.9323,
+            0.3115
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Laptop docking station",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3182,
+            0.2185,
+            0.3305
+          ]
+        },
+        "quantity": {
+          "value": 4.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3182,
+            0.5544,
+            0.3305
+          ]
+        },
+        "unit_price": {
+          "value": 210.23,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3182,
+            0.7056,
+            0.3305
+          ]
+        },
+        "vat_rate": {
+          "value": 25.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3182,
+            0.7812,
+            0.3305
+          ]
+        },
+        "line_total": {
+          "value": 840.92,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3182,
+            0.9323,
+            0.3305
+          ]
+        }
+      }
+    ]
+  }
+}

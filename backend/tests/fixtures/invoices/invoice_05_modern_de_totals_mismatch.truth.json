@@ -1,0 +1,382 @@
+{
+  "file": "invoice_05_modern_de_totals_mismatch.pdf",
+  "template": "modern",
+  "vendor_country": "DE",
+  "edge_cases": [
+    "totals_mismatch"
+  ],
+  "fields": {
+    "vendor_name": {
+      "value": "Budig Tech GmbH",
+      "source_page": 1,
+      "bbox": [
+        0.0672,
+        0.0321,
+        0.3603,
+        0.0594
+      ]
+    },
+    "vendor_vat_id": {
+      "value": "DE853477870",
+      "source_page": 1,
+      "bbox": [
+        0.1941,
+        0.1377,
+        0.2907,
+        0.15
+      ]
+    },
+    "invoice_number": {
+      "value": "DE-2026-54477",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1675,
+        0.3706,
+        0.1811
+      ]
+    },
+    "invoice_date": {
+      "value": "2026-06-19",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.1841,
+        0.336,
+        0.1978
+      ]
+    },
+    "due_date": {
+      "value": "2026-07-10",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2007,
+        0.336,
+        0.2144
+      ]
+    },
+    "currency": {
+      "value": "EUR",
+      "source_page": 1,
+      "bbox": [
+        0.252,
+        0.2174,
+        0.2874,
+        0.231
+      ]
+    },
+    "subtotal": {
+      "value": 17799.59,
+      "source_page": 1,
+      "bbox": [
+        0.8175,
+        0.386,
+        0.8922,
+        0.3997
+      ]
+    },
+    "vat_total": {
+      "value": 3381.92,
+      "source_page": 1,
+      "bbox": [
+        0.8268,
+        0.405,
+        0.8922,
+        0.4187
+      ]
+    },
+    "total": {
+      "value": 21191.51,
+      "source_page": 1,
+      "bbox": [
+        0.806,
+        0.423,
+        0.8882,
+        0.438
+      ]
+    },
+    "iban": {
+      "value": "DE48804571784726714751",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4668,
+        0.4957,
+        0.4805
+      ]
+    },
+    "payment_reference": {
+      "value": "RF38205258983194",
+      "source_page": 1,
+      "bbox": [
+        0.2856,
+        0.4834,
+        0.4387,
+        0.4971
+      ]
+    },
+    "line_items": [
+      {
+        "description": {
+          "value": "Printer toner cartridge",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2802,
+            0.2134,
+            0.2925
+          ]
+        },
+        "quantity": {
+          "value": 10.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.2802,
+            0.5544,
+            0.2925
+          ]
+        },
+        "unit_price": {
+          "value": 65.67,
+          "source_page": 1,
+          "bbox": [
+            0.6677,
+            0.2802,
+            0.7056,
+            0.2925
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.2802,
+            0.7812,
+            0.2925
+          ]
+        },
+        "line_total": {
+          "value": 656.7,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.2802,
+            0.9323,
+            0.2925
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Support retainer",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.2992,
+            0.1756,
+            0.3115
+          ]
+        },
+        "quantity": {
+          "value": 12.0,
+          "source_page": 1,
+          "bbox": [
+            0.5376,
+            0.2992,
+            0.5544,
+            0.3115
+          ]
+        },
+        "unit_price": {
+          "value": 1255.92,
+          "source_page": 1,
+          "bbox": [
+            0.6467,
+            0.2992,
+            0.7056,
+            0.3115
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.2992,
+            0.7812,
+            0.3115
+          ]
+        },
+        "line_total": {
+          "value": 15071.04,
+          "source_page": 1,
+          "bbox": [
+            0.8651,
+            0.2992,
+            0.9323,
+            0.3115
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Consulting services (hours)",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3182,
+            0.2503,
+            0.3305
+          ]
+        },
+        "quantity": {
+          "value": 4.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3182,
+            0.5544,
+            0.3305
+          ]
+        },
+        "unit_price": {
+          "value": 150.29,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3182,
+            0.7056,
+            0.3305
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3182,
+            0.7812,
+            0.3305
+          ]
+        },
+        "line_total": {
+          "value": 601.16,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3182,
+            0.9323,
+            0.3305
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Website maintenance",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3372,
+            0.2126,
+            0.3495
+          ]
+        },
+        "quantity": {
+          "value": 3.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3372,
+            0.5544,
+            0.3495
+          ]
+        },
+        "unit_price": {
+          "value": 400.37,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3372,
+            0.7056,
+            0.3495
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3372,
+            0.7812,
+            0.3495
+          ]
+        },
+        "line_total": {
+          "value": 1201.11,
+          "source_page": 1,
+          "bbox": [
+            0.8735,
+            0.3372,
+            0.9323,
+            0.3495
+          ]
+        }
+      },
+      {
+        "description": {
+          "value": "Laptop docking station",
+          "source_page": 1,
+          "bbox": [
+            0.0672,
+            0.3562,
+            0.2185,
+            0.3685
+          ]
+        },
+        "quantity": {
+          "value": 1.0,
+          "source_page": 1,
+          "bbox": [
+            0.546,
+            0.3562,
+            0.5544,
+            0.3685
+          ]
+        },
+        "unit_price": {
+          "value": 269.58,
+          "source_page": 1,
+          "bbox": [
+            0.6593,
+            0.3562,
+            0.7056,
+            0.3685
+          ]
+        },
+        "vat_rate": {
+          "value": 19.0,
+          "source_page": 1,
+          "bbox": [
+            0.7509,
+            0.3562,
+            0.7812,
+            0.3685
+          ]
+        },
+        "line_total": {
+          "value": 269.58,
+          "source_page": 1,
+          "bbox": [
+            0.8861,
+            0.3562,
+            0.9323,
+            0.3685
+          ]
+        }
+      }
+    ]
+  }
+}
