@@ -21,8 +21,8 @@ vi.mock('react-pdf', () => ({
     }, [onLoadSuccess]);
     return createElement('div', { 'data-testid': 'pdf-document' }, children);
   },
-  Page: ({ pageNumber }: { pageNumber: number }) =>
-    createElement('div', { 'data-testid': 'pdf-page' }, `Page ${pageNumber}`),
+  Page: ({ pageNumber, width }: { pageNumber: number; width?: number }) =>
+    createElement('div', { 'data-testid': 'pdf-page', 'data-width': width }, `Page ${pageNumber}`),
 }));
 
 class ResizeObserverStub {

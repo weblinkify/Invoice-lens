@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { DocumentViewer } from './DocumentViewer';
 
@@ -64,5 +64,43 @@ describe('DocumentViewer', () => {
     );
     expect(screen.getByAltText('Scanned invoice scan.png')).toBeInTheDocument();
     expect(screen.getByTestId('bbox-highlight')).toBeInTheDocument();
+  });
+});
+
+describe('DocumentViewer sizing', () => {
+  it('ignores scrollbar-sized width changes so the page does not re-render in a loop', () => {
+    let notify: ResizeObserverCallback = () => undefined;
+    const original = globalThis.ResizeObserver;
+    globalThis.ResizeObserver = class {
+      constructor(cb: ResizeObserverCallback) {
+        notify = cb;
+      }
+      observe(): void {}
+      unobserve(): void {}
+      disconnect(): void {}
+    };
+    const resize = (width: number) => {
+      act(() => {
+        notify([{ contentRect: { width } } as ResizeObserverEntry], {} as ResizeObserver);
+      });
+    };
+    try {
+      render(
+        <DocumentViewer
+          url="/f.pdf"
+          contentType="application/pdf"
+          filename="a.pdf"
+          highlight={null}
+        />,
+      );
+      resize(832);
+      expect(screen.getByTestId('pdf-page')).toHaveAttribute('data-width', '800');
+      resize(817); // vertical scrollbar appeared
+      expect(screen.getByTestId('pdf-page')).toHaveAttribute('data-width', '800');
+      resize(632); // real resize
+      expect(screen.getByTestId('pdf-page')).toHaveAttribute('data-width', '600');
+    } finally {
+      globalThis.ResizeObserver = original;
+    }
   });
 });

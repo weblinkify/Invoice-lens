@@ -37,8 +37,12 @@ export function DocumentViewer({ url, contentType, filename, highlight }: Props)
   useEffect(() => {
     const el = containerRef.current;
     if (!el || typeof ResizeObserver === 'undefined') return;
+    // Ignore tiny changes: a scrollbar appearing/disappearing would otherwise resize the page,
+    // which toggles the scrollbar again — an endless re-render (visible flashing).
     const observer = new ResizeObserver(([entry]) => {
-      if (entry) setWidth(Math.max(280, entry.contentRect.width - 32));
+      if (!entry) return;
+      const next = Math.max(280, Math.floor(entry.contentRect.width - 32));
+      setWidth((prev) => (Math.abs(prev - next) > 24 ? next : prev));
     });
     observer.observe(el);
     return () => {
@@ -148,7 +152,7 @@ export function DocumentViewer({ url, contentType, filename, highlight }: Props)
       </div>
       <div
         ref={containerRef}
-        className="flex-1 overflow-auto p-4"
+        className="flex-1 overflow-auto p-4 [scrollbar-gutter:stable]"
         tabIndex={0}
         aria-label="Document page"
       >
