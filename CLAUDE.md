@@ -22,8 +22,9 @@ AI invoice-extraction portal. Monorepo: `backend/` (FastAPI), `frontend/` (React
 | Frontend tests + coverage | `cd frontend && npm run test:coverage` |
 | Lint / typecheck all | `make lint` |
 | Regenerate API types | `make openapi` |
-| Full stack in Docker | `make up` (frontend :8080, API :8000, mock-erp :9000) |
-| E2E | `make e2e` |
+| Full stack in Docker | `make up` (frontend :8080, API :8000, mock-erp :9000; override with `FRONTEND_PORT`/`BACKEND_PORT`/`MOCK_ERP_PORT`) |
+| README accuracy table | `make accuracy` |
+| E2E | `make e2e` (resets the stack's documents; writes `docs/screenshots/`) |
 | Seed demo data | `make demo` |
 | Regenerate invoice fixtures | `make generate-invoices` |
 
@@ -49,3 +50,9 @@ Background work uses FastAPI `BackgroundTasks`. Tests run the pipeline synchrono
 - Mock invoices are matched to ground truth by SHA-256 of the file bytes, so regenerating fixtures changes which noise the MockProvider injects.
 - Intel macOS: `cryptography>=49` has no wheels, constrained in `backend/pyproject.toml`.
 - Bounding boxes are normalized `[x0, y0, x1, y1]` in 0..1 with a top-left origin.
+- Run the API with the factory: `uvicorn --factory app.main:create_app` (there is no module-level `app`).
+- Reviewer corrections are learned per vendor (few-shot), so re-uploading a fixture after correcting it returns the fixed value at 0.97. E2E clears documents first for that reason.
+- openapi-fetch must late-bind `fetch` (see `src/api/client.ts`) or MSW can't intercept it in tests.
+- nginx must serve `.mjs` as JavaScript or the pdf.js worker fails ("Could not load the PDF").
+- `DocumentViewer` ignores width changes ≤ 24px and reserves the scrollbar gutter; without that, a scrollbar toggling resizes the page in a loop (flashing preview).
+- Frontend pins: React 18 (spec), `react-pdf@10` (v11 needs React 19), TypeScript 5.9 (openapi-typescript peer).
