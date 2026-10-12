@@ -8,7 +8,7 @@ UV ?= uv
 COMPOSE ?= docker compose
 
 .PHONY: help setup dev dev-backend dev-frontend dev-mock test test-backend test-frontend \
-        lint format e2e demo generate-invoices openapi accuracy up down logs clean
+        lint format e2e e2e-demo demo generate-invoices openapi accuracy up down logs clean
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-18s\033[0m %s\n", $$1, $$2}'
@@ -66,6 +66,9 @@ logs: ## Tail stack logs
 
 e2e: up ## Run Playwright E2E tests against docker compose (resets the stack's documents)
 	cd $(FRONTEND) && npx playwright install chromium && E2E_BASE_URL=http://localhost:$${FRONTEND_PORT:-8080} MOCK_ERP_URL=http://localhost:$${MOCK_ERP_PORT:-9000} npm run e2e
+
+e2e-demo: ## Run Playwright smoke tests against the static MSW demo (set DEMO_URL to test a live deployment)
+	cd $(FRONTEND) && npx playwright install chromium && npm run e2e:demo
 
 demo: up ## Start the stack and seed it with the sample invoices
 	$(COMPOSE) exec -T backend python -m scripts.seed_demo --api http://localhost:8000

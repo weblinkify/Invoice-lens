@@ -103,6 +103,37 @@ jobs:
       - name: Build
         run: npm run build
 
+  e2e-demo:
+    name: E2E (static demo + Playwright)
+    needs: [frontend]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - uses: actions/setup-node@v4.4.0
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Run demo smoke tests
+        run: npm run e2e:demo
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: playwright-report-demo
+          path: |
+            frontend/playwright-report
+            frontend/test-results
+          retention-days: 14
+
   e2e:
     name: E2E (docker compose + Playwright)
     needs: [backend, frontend]
