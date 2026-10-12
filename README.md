@@ -11,7 +11,7 @@
 ![React](https://img.shields.io/badge/react-18-61DAFB?logo=react&logoColor=black)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-[**Live demo**](https://invoicelens.example.com) · [Quick start](#quick-start) · [Architecture](#architecture) · [Accuracy](#accuracy)
+[**Live demo**](https://invoicelens-indol.vercel.app) · [Quick start](#quick-start) · [Architecture](#architecture) · [Accuracy](#accuracy)
 
 <img src="docs/screenshots/demo.gif" alt="Loading a sample invoice, fixing a low-confidence field, approving and seeing it in the documents list" width="900" />
 
@@ -147,6 +147,8 @@ How to read this honestly:
 
 ## Quick start
 
+**Just want to click around?** The [live demo](https://invoicelens-indol.vercel.app) is the frontend built with `npm run build:demo`: the API runs in the browser via MSW (no backend, no data leaves your machine), so uploads return the canned sample extraction. Run the full stack below to extract your own invoices.
+
 Requirements: Docker with Compose v2.
 
 ```bash
@@ -227,11 +229,12 @@ then `docker compose up -d`. The Claude provider sends the **PDF itself** (or th
 | mock-erp | `cd mock-erp && uv run pytest` | Signature verification, `/fail-next`, reset |
 | Frontend | `make test-frontend` | 86 Vitest + Testing Library tests with **MSW**, **≥ 80% coverage enforced** (currently ~96%): confidence chip, field editor, validation messages, dropzone, query/mutation hooks, review page (correct PATCH body, Tab/Enter/Ctrl+Enter, bbox highlight), settings |
 | E2E | `make e2e` | Playwright against `docker compose`: upload → review → fix low-confidence field → approve → assert the exported CSV; few-shot reuse; webhook to mock-erp with **independent HMAC verification**; retry path via `POST /fail-next`; README screenshots |
+| Demo smoke | `make e2e-demo` | Playwright against the static MSW build that Vercel serves: sample invoice → PDF preview renders → approve; SPA deep links return 200. `DEMO_URL=https://invoicelens-indol.vercel.app` runs it against the live demo |
 | Lint / types | `make lint` | ruff, ruff format, `mypy --strict`, ESLint (strict type-checked), Prettier, `tsc` |
 
 `make e2e` resets the documents in the compose stack, because learned corrections would otherwise make reruns non-deterministic.
 
-CI (`.github/workflows/ci.yml`) runs the backend and frontend jobs in parallel (including a check that the generated API types match the OpenAPI schema), then the E2E job on a fresh compose stack. Playwright reports, traces and compose logs are uploaded when it fails. Pushing a `v*` tag publishes multi-arch images to GHCR (`docker.yml`).
+CI (`.github/workflows/ci.yml`) runs the backend and frontend jobs in parallel (including a check that the generated API types match the OpenAPI schema), then the E2E jobs: the full flow on a fresh compose stack, and the demo smoke tests against the static build. Playwright reports, traces and compose logs are uploaded when it fails. Pushing a `v*` tag publishes multi-arch images to GHCR (`docker.yml`).
 
 ## Project structure
 

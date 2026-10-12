@@ -25,6 +25,8 @@ AI invoice-extraction portal. Monorepo: `backend/` (FastAPI), `frontend/` (React
 | Full stack in Docker | `make up` (frontend :8080, API :8000, mock-erp :9000; override with `FRONTEND_PORT`/`BACKEND_PORT`/`MOCK_ERP_PORT`) |
 | README accuracy table | `make accuracy` |
 | E2E | `make e2e` (resets the stack's documents; writes `docs/screenshots/`) |
+| E2E against the static demo (MSW, what Vercel serves) | `make e2e-demo` (`DEMO_URL=https://…` to hit a deployment) |
+| Deploy live demo | `cd frontend && npx vercel deploy --prod --scope field-iq1` (project `invoicelens`, config in `frontend/vercel.json`) |
 | Seed demo data | `make demo` |
 | Regenerate invoice fixtures | `make generate-invoices` |
 

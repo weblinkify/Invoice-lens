@@ -50,6 +50,7 @@ Protect `main` under **Settings → Branches → Add branch ruleset** (or *Branc
   - `Backend (lint, types, tests)`
   - `Frontend (types in sync, lint, tests, build)`
   - `E2E (docker compose + Playwright)`
+  - `E2E (static demo + Playwright)`
 - ✅ Require linear history (optional)
 
 With the GitHub CLI:
@@ -62,7 +63,8 @@ gh api -X PUT repos/weblinkify/Invoice-lens/branches/main/protection --input - <
     "contexts": [
       "Backend (lint, types, tests)",
       "Frontend (types in sync, lint, tests, build)",
-      "E2E (docker compose + Playwright)"
+      "E2E (docker compose + Playwright)",
+      "E2E (static demo + Playwright)"
     ]
   },
   "enforce_admins": false,
