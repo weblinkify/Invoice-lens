@@ -7,6 +7,7 @@
     "dev": "vite",
     "dev:mock": "vite --mode mock",
     "build": "tsc -b && vite build",
+    "build:demo": "tsc -b && vite build --mode mock",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
     "lint": "eslint . --max-warnings=0",
@@ -16,7 +17,8 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "gen:api": "openapi-typescript openapi.json -o src/api/schema.d.ts && prettier --write src/api/schema.d.ts",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "e2e:demo": "playwright test -c playwright.demo.config.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",
@@ -31,7 +33,7 @@
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.89.0",
     "react-pdf": "^10.5.0",
-    "react-router-dom": "^6.30.6",
+    "react-router-dom": "^7.18.4",
     "sonner": "^2.0.8",
     "tailwind-merge": "^3.7.0",
     "zod": "^4.6.5"

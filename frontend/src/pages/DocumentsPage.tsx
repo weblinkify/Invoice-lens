@@ -184,7 +184,7 @@ export function DocumentsPage() {
                 data-state={selected.has(d.id) ? 'selected' : undefined}
                 className="cursor-pointer"
                 onClick={() => {
-                  navigate(`/documents/${d.id}`);
+                  void navigate(`/documents/${d.id}`);
                 }}
               >
                 <TableCell

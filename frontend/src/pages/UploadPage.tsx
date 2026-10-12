@@ -132,7 +132,7 @@ export function UploadPage() {
     }
     loadSample.mutate(name, {
       onSuccess: (res) => {
-        navigate(`/documents/${res.id}`);
+        void navigate(`/documents/${res.id}`);
       },
       onError: (err) => toast.error(err.message),
     });
