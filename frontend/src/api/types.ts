@@ -29,13 +29,6 @@ export type ExportFormat = NonNullable<
   NonNullable<paths['/api/v1/exports']['get']['parameters']['query']>['format']
 >;
 
-export const TERMINAL_STATUSES: readonly DocumentStatus[] = [
-  'needs_review',
-  'extracted',
-  'approved',
-  'failed',
-];
-
 export function isProcessing(status: DocumentStatus): boolean {
   return status === 'queued' || status === 'processing';
 }
